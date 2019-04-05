@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка-форма заказа</title>
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo logo" href="index.html">
+      <img class="logo__image" src="http://placehold.it/100x45" width="100" height="45" alt="Логотип интернет-магазина вязаных игрушек Mishka">
+    </a>
+    <button class="header__toggle" type="button">Открыть меню</button>
+    <nav class="nav">
+      <ul class="site-nav">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link">Вязание на заказ</a>
+        </li>
+      </ul>
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+        <label class="search-form__label" for="search">
+          <span class="visually-hidden">Поиск по сайту</span>
+          <!--иконка "лупа" будет заинлайненным svg -->
+        </label>
+        <input class="search-form__input" id="search" type="search" name="header-search"  placeholder="Поиск по сайту">
+      </form>
+      <a class="cart" href="#">Корзина: пока пуста</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__social social">
+      <!--иконки - инлайн svg-->
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="visually-hidden">Mishka в Инстаграме</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="visually-hidden">Mishka на Фейсбуке</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="visually-hidden">Mishka в Tвиттере</span>
+        </a>
+      </li>
+    </ul>
+    <p class="footer__copyright copyright">Разработано
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">HTMLAcademy</span>
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
