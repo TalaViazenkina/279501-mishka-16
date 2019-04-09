@@ -13,10 +13,10 @@
     <nav class="nav">
       <ul class="site-nav">
         <li class="site-nav__item">
-          <a class="site-nav__link">Каталог товаров</a>
+          <a class="nav__item">Каталог товаров</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="form.html">Вязание на заказ</a>
+          <a class="nav__item" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -24,15 +24,15 @@
           <span class="visually-hidden">Поиск по сайту</span>
           <!--иконка "лупа" будет заинлайненным svg -->
         </label>
-        <input class="search-form__input" id="search" type="search" name="header-search"  placeholder="Поиск по сайту">
+        <input class="search-form__input nav__item" id="search" type="search" name="header-search"  placeholder="Поиск по сайту">
       </form>
-      <a class="cart" href="#">Корзина: пока пуста</a>
+      <a class="cart nav__item" href="#">Корзина: пока пуста</a>
     </nav>
   </header>
 
   <main class="main">
-    <h1 class="main__title main__title--inner">Каталог товаров</h1>
-    <section class="catalog">
+    <h1 class="main__title">Каталог товаров</h1>
+    <section class="section catalog">
       <h2 class="visually-hidden">Наша продукция</h2>
       <ul class="catalog-list">
         <li class="catalog-list__item product">
@@ -76,6 +76,20 @@
         </li>
       </ul>
     </section>
+    <section class="making">
+      <h2 class="making__title">Процесс производства</h2>
+      <div class="video making__video">
+        <video class="video__content"  preload="none" width="260" height="150" poster="http://placehold.it/260x150">
+          <!-- источники видео -->
+          <source src="video.mp4" type="video/mp4">
+          <source src="video.ogv" type="video/ogg">
+          <source src="video.webm" type="video/webm">
+        </video>
+        <button class="video__control">Воспроизвести</button>
+      </div>
+      <p class="making__description"> По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <a href="#" class="button">Сделать заказ</a>
+    </section>
   </main>
 
   <footer class="footer">
@@ -105,14 +119,14 @@
   </footer>
 
   <section class="modal-adding">
-    <h2 class="modal-adding__title section-title">Добавить в корзину</h2>
+    <h2 class="modal-adding__title">Добавить в корзину</h2>
     <p class="modal-adding__intro">Выберите размер:</p>
-    <p class="modal-adding__size-wrapper">
-      <button class="button modal-adding__size" type="button">S</button>
-      <button class="button modal-adding__size" type="button">M</button>
-      <button class="button modal-adding__size" type="button">L</button>
+    <p class="modal-adding__control-group">
+      <button class="modal-adding__button" type="button">S</button>
+      <button class="modal-adding__button" type="button">M</button>
+      <button class="modal-adding__button" type="button">L</button>
     </p>
-    <button class="button modal-adding__button" type="button">Добавить</button>
+    <button class="button button_theme_decor" type="button">Добавить</button>
   </section>
 
 </body>
