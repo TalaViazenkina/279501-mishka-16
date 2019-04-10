@@ -3,10 +3,12 @@
   padding: 14px;
 
   .font(17px; 20px);
+  font-weight: 700;
   color: @second-color;
   text-transform: uppercase;
   text-align: center;
 
+  background-color: transparent;
   border: 2px solid @second-color;
 
   &:hover {
@@ -17,3 +19,19 @@
     color: rgba(255, 255, 255, 0.3);
   }
 }
+
+ .button_theme_decor {
+    color: #ffffff;
+
+    background-color: @decor-color;
+    border-color: @decor-color;
+
+    &:hover {
+    background-color: #59d5bc;
+    border-color: #59d5bc;
+    }
+
+    &:active {
+    color: rgba(255, 255, 255, 0.3);
+    }
+  }
