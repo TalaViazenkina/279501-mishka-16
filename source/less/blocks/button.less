@@ -1,0 +1,35 @@
+.button {
+  .font(17px; 20px);
+  font-weight: 700;
+  color: @gray-darken;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding: 14px;
+  background-color: transparent;
+  border: 2px solid @gray-darken;
+
+  &:hover {
+    color: @white;
+    background-color: @gray-darken;
+  }
+
+  &:active {
+    color: rgba(@white, 0.3);
+  }
+}
+
+.button_theme_decor {
+  color: @white;
+  background-color: @downy;
+  border-color: @downy;
+
+  &:hover {
+    background-color: @viking;
+    border-color: @viking;
+  }
+
+  &:active {
+    color: rgba(@white, 0.3);
+  }
+}
