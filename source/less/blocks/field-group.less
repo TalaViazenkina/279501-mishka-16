@@ -1,0 +1,36 @@
+.field-group {
+  border: none;
+}
+
+.field-group__legend {
+  .font(17px; 16px);
+  position: relative;
+
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+
+  text-transform: uppercase;
+  color: @downy;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    left: 62px;
+
+    height: 1px;
+
+    background-color: @downy-dark;
+
+  }
+}
+
+.field-group__list {
+  .list-off();
+}
+
+.field-group__item {
+  .font(17px; 18px);
+}
