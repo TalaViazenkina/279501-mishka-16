@@ -1,8 +1,8 @@
 .modal-adding {
   padding: 30px 30px 47px;
-  background-color: #ffffff;
-  border-top: 1px solid #c7c7c7;
-  border-bottom: 1px solid #c7c7c7;
+  background-color: @white;
+  border-top: 1px solid @gray-dark;
+  border-bottom: 1px solid @gray-dark;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 }
 
@@ -15,7 +15,7 @@
 .modal-adding__intro {
   .font(15px; 30px);
   font-weight: 400;
-  color: @second-color;
+  color: @gray-darken;
   margin: 0 0 20px;
 }
 
@@ -26,24 +26,24 @@
 .modal-adding__button {
   .font(17px; 16px);
   font-weight: 700;
-  color: @second-color;
+  color: @gray-darken;
   text-transform: uppercase;
   text-align: center;
   box-sizing: border-box;
   min-width: 82px;
   padding: 16px;
   background-color: transparent;
-  border: 2px solid @border-color;
+  border: 2px solid @gray-light;
 
   &_checked {
-    border-color: @decor-color;
+    border-color: @downy;
   }
 
   &:hover {
-    border-color: #c7c7c7;
+    border-color: @gray-dark;
   }
 
   &:active {
-    border-color: @decor-color;
+    border-color: @downy;
   }
 }

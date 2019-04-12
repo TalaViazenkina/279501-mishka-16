@@ -1,35 +1,35 @@
 .button {
   .font(17px; 20px);
   font-weight: 700;
-  color: @second-color;
+  color: @gray-darken;
   text-transform: uppercase;
   text-align: center;
   display: block;
   padding: 14px;
   background-color: transparent;
-  border: 2px solid @second-color;
+  border: 2px solid @gray-darken;
 
   &:hover {
-    color: #ffffff;
-    background-color: @second-color;
+    color: @white;
+    background-color: @gray-darken;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(@white, 0.3);
   }
 }
 
 .button_theme_decor {
-  color: #ffffff;
-  background-color: @decor-color;
-  border-color: @decor-color;
+  color: @white;
+  background-color: @downy;
+  border-color: @downy;
 
   &:hover {
-    background-color: #59d5bc;
-    border-color: #59d5bc;
+    background-color: @viking;
+    border-color: @viking;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(@white, 0.3);
   }
 }
