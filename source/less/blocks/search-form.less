@@ -1,5 +1,31 @@
+.search-form {
+  border-top: 1px solid @gray-light;
+}
+
 .search-form__input {
   box-sizing: border-box;
   width: 100%;
+  padding: 27px 30px 27px 75px;
+
   font: inherit;
+  color: @black;
+
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .search-form {
+    border-top: none;
+    border-left: 1px solid @gray-light;
+  }
+
+  .search-form__label {
+    display: block;
+    width: 82px; //временно
+    height: 88px; //временно
+  }
+
+  .search-form__input {
+    display: none;
+  }
 }
