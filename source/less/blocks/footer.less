@@ -1,4 +1,21 @@
 .footer {
+  display: flex;
+  flex-direction: column;
   padding: 20px 30px;
   background-color: @gray-lightest;
+}
+
+.footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    display: flex;
+  }
 }
