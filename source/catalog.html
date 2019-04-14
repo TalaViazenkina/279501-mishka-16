@@ -46,70 +46,78 @@
 
   <main class="main">
     <h1 class="main__title">Каталог товаров</h1>
-    <section class="section catalog">
-      <h2 class="visually-hidden">Наша продукция</h2>
-      <ul class="catalog-list">
-        <li class="catalog-list__item product">
-          <a class="product__image" href="#">
-            <img src="http://placehold.it/100x45" width="100" height="45" alt="Зайчик-попрыгайчик">
-          </a>
-          <div class="product__description">
-            <h3 class="product__title">
-              <a class="product__link" href="#">Зайчик-попрыгайчик</a>
-            </h3>
-            <p class="product__text">Рост 30см, вес 200 г</p>
-            <p class="product__price">1 200 руб.</p>
-            <a class="product__button" href="#">
-              <span class="visually-hidden">Добавить в корзину</span>
+    <div class="container">
+      <section class="catalog">
+        <h2 class="visually-hidden">Наша продукция</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item product">
+            <a class="product__image" href="#">
+              <img src="http://placehold.it/100x45" width="100" height="45" alt="Зайчик-попрыгайчик">
             </a>
-          </div>
-        </li>
-        <li class="catalog-list__item product">
-          <a class="product__image" href="#">
-            <img src="http://placehold.it/100x45" width="100" height="45" alt="Корзинка для белья">
-          </a>
-          <div class="product__description">
-            <h3 class="product__title">
-              <a class="product__link" href="#">Корзинка для белья</a>
-            </h3>
-            <p class="product__text">Диаметр 15 см, высота 10 см</p>
-            <p class="product__price">690 руб.</p>
-            <a class="product__button" href="#">
-              <span class="visually-hidden">Добавить в корзину</span>
+            <div class="product__description">
+              <h3 class="product__title">
+                <a class="product__link" href="#">Зайчик-попрыгайчик</a>
+              </h3>
+              <p class="product__text">Рост 30см, вес 200 г</p>
+              <div class="product__inner">
+                <p class="product__price">1 200 руб.</p>
+                <a class="product__button" href="#">
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__item product">
+            <a class="product__image" href="#">
+              <img src="http://placehold.it/100x45" width="100" height="45" alt="Корзинка для белья">
             </a>
-          </div>
-        </li>
-        <li class="catalog-list__item product">
-          <a class="product__image" href="#">
-            <img src="http://placehold.it/100x45" width="100" height="45" alt="Большая корзинка для игрушек">
-          </a>
-          <div class="product__description">
-            <h3 class="product__title">
-              <a class="product__link" href="#">Большая корзинка для игрушек</a>
-            </h3>
-            <p class="product__text">Диаметр 30 см, высота 30 см</p>
-            <p class="product__price">1 500 руб.</p>
-            <a class="product__button" href="#">
-              <span class="visually-hidden">Добавить в корзину</span>
+            <div class="product__description">
+              <h3 class="product__title">
+                <a class="product__link" href="#">Корзинка для белья</a>
+              </h3>
+              <p class="product__text">Диаметр 15 см, высота 10 см</p>
+              <div class="product__inner">
+                <p class="product__price">690 руб.</p>
+                <a class="product__button" href="#">
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__item product">
+            <a class="product__image" href="#">
+              <img src="http://placehold.it/100x45" width="100" height="45" alt="Большая корзинка для игрушек">
             </a>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section class="making">
-      <h2 class="making__title">Процесс производства</h2>
-      <div class="video making__video">
-        <video class="video__content"  preload="none" width="260" height="150" poster="http://placehold.it/260x150">
-          <!-- источники видео -->
-          <source src="video.mp4" type="video/mp4">
-          <source src="video.ogv" type="video/ogg">
-          <source src="video.webm" type="video/webm">
-        </video>
-        <button class="video__control">Воспроизвести</button>
-      </div>
-      <p class="making__description"> По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a href="#" class="button">Сделать заказ</a>
-    </section>
+            <div class="product__description">
+              <h3 class="product__title">
+                <a class="product__link" href="#">Большая корзинка для&nbsp;игрушек</a>
+              </h3>
+              <p class="product__text">Диаметр 30 см, высота 30 см</p>
+              <div class="product__inner">
+                <p class="product__price">1 500 руб.</p>
+                <a class="product__button" href="#">
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="making">
+        <h2 class="making__title">Процесс производства</h2>
+        <div class="video making__video">
+          <video class="video__content"  preload="none" width="260" height="150" poster="http://placehold.it/260x150">
+            <!-- источники видео -->
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.ogv" type="video/ogg">
+            <source src="video.webm" type="video/webm">
+          </video>
+          <button class="video__control">Воспроизвести</button>
+        </div>
+        <p class="making__description"> По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a href="#" class="button">Сделать заказ</a>
+      </section>
+    </div>
   </main>
 
   <footer class="footer container">
