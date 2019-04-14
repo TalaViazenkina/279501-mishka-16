@@ -2,6 +2,10 @@
   padding: 30px 30px 40px;
 }
 
+.popular__inner {
+  margin: 0 0 20px 0;
+}
+
 .popular__title {
   .font(25px; 30px);
   color: @black;
@@ -12,10 +16,10 @@
   .font(17px; 20px);
   color: @downy;
   text-transform: uppercase;
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
-.popular__description {
+.popular__text {
   .font(15px; 24px);
   font-weight: 400;
   color: @gray-darken;
@@ -30,6 +34,8 @@
   width: 260px;
   height: 315px;
   margin: 0 0 25px 0;
+
+  background-color: @gray-lightest; //временно для сетки
 }
 
 .popular__price {
@@ -37,4 +43,97 @@
   text-align: center;
   color: @gray-darken;
   margin: 0 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .popular {
+    padding: 60px 50px;
+  }
+
+  .popular__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .popular__title {
+    .font(43px; 50px);
+  }
+
+  .popular__label {
+    .font(17px; 17px);
+
+    width: 125px;
+
+    text-align: center;
+  }
+
+  .popular__description {
+    position: relative;
+    width: 290px;
+    padding-right: 378px;
+  }
+
+  .popular__text {
+    .font(17px; 30px);
+    margin-bottom: 45px;
+  }
+
+  .popular__properties {
+    margin-bottom: 55px;
+  }
+
+  .popular__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 334px;
+    height: 405px;
+    margin: 0;
+  }
+
+  .popular__price {
+    .font(20px; 24px);
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popular {
+    padding: 125px 0 85px 175px;
+  }
+
+  .popular__inner {
+    justify-content: flex-start;
+    margin-left: -175px;
+  }
+
+  .popular__title {
+    .font(53px; 57px);
+  }
+
+  .popular__label {
+    order: -1;
+    padding: 0 25px;
+  }
+
+  .popular__description {
+    padding-right: 585px;
+  }
+
+  .popular__text {
+    margin-bottom: 55px;
+  }
+
+  .popular__properties {
+    margin-bottom: 110px;
+  }
+
+  .popular__image {
+    z-index: -1;
+    width: 525px;
+    height: 636px;
+  }
 }
