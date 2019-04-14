@@ -5,6 +5,7 @@
 /* Разобраться с изменением цвета svg */
 .advantages__item {
   .font(17px; 20px);
+  width: 250px;
   padding-top: 80px;
   background-image: url("../img/icon-feature-flower.svg");
   background-repeat: no-repeat;
@@ -33,5 +34,35 @@
   &_gift {
     background-image: url("../img/icon-feature-gift.svg");
     background-position: 0 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    .font(20px; 22px);
+    width: 295px;
+    padding-bottom: 20px;
+    margin-right: 39px;
+  }
+
+  .advantages__item:nth-child(2),
+  .advantages__item:nth-child(5) {
+    order: 1;
+  }
+
+  .advantages__item:nth-child(3),
+  .advantages__item:nth-child(6) {
+    order: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    margin-right: 55px;
   }
 }
