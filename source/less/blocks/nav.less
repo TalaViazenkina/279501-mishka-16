@@ -1,16 +1,19 @@
-.nav__item {
-  display: block;
-  padding: 27px 30px 27px 75px;
-  color: @black;
-  border: none;
-  border-top: 1px solid @gray-light;
+.nav {
+  display: flex;
+  flex-direction: column;
+}
 
-  &:hover,
-  &:focus {
-    color: rgba(@black, 0.6);
+@media (min-width: @tablet-width) {
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &:active {
-    color: rgba(@black, 0.3);
+  .nav__inner {
+    display: flex;
+    justify-content: flex-end;
+    width: 440px;
   }
 }

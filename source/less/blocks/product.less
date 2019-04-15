@@ -1,6 +1,26 @@
+.product__image {
+  .size(260px; 195px);
+
+  position: relative;
+  z-index: 1;
+  display: block;
+
+  background-color: @gray-lightest; //временно для сетки
+}
+
 .product__description {
-  padding: 27px 27px 25px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 27px 27px 0;
   border: 1px solid @gray-lighten;
+}
+
+.product__image:hover ~ .product__description {
+  box-shadow: 0 6px 10px 0 rgba(@black; 0.1);
+}
+
+.product__image:active ~ .product__description {
+  box-shadow: 0 3px 5px 0 rgba(@black; 0.1);
 }
 
 .product__title {
@@ -12,13 +32,44 @@
   color: @black;
 }
 
+.product__shadow {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    display: none;
+
+    box-shadow: 0 6px 10px 0 rgba(@black; 0.1);
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  &:active::after {
+    box-shadow: 0 3px 5px 0 rgba(@black; 0.1);
+  }
+}
+
 .product__text {
   .font(13px; 30px);
   font-weight: 400;
   color: @gray-darken;
-  margin: 0 0 10px;
+  margin: 0;
   padding-bottom: 20px;
-  border-bottom: 1px solid @gray-light;
+}
+
+.product__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid @gray-light;
 }
 
 .product__price {
@@ -27,6 +78,63 @@
 }
 
 .product__button {
-  .size(40px; 40px);
-  display: block;
+  .size(84px; 72px);
+  margin-right: -27px;
+
+  background-color: @gray-lightest; //временно для сетки
+}
+
+@media (min-width: @tablet-width) {
+  .product__image {
+    .size(334px; 334px);
+  }
+
+  .product__description {
+    display: flex;
+    flex-direction: column;
+    width: 334px;
+    padding: 27px 33px 0;
+  }
+
+  .product__title {
+    margin: 0;
+  }
+
+  .product__link {
+    .font(20px; 24px);
+  }
+
+  .product__text {
+    .font(15px; 30px);
+    margin: 0 0 auto;
+  }
+
+  .product__price {
+    .font(17px; 24px);
+    margin: 0;
+  }
+
+  .product__button {
+    margin-right: -33px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product__image {
+    .size(316px; 462px);
+  }
+
+  .product__description {
+    width: 100%;
+    flex-grow: 1;
+    padding: 27px 30px 0 27px;
+  }
+
+  .product__text {
+    padding-bottom: 10px;
+  }
+
+  .product__button {
+    margin-right: -30px;
+  }
 }

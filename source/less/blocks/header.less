@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   border-top: 1px solid @gray-light;
   border-bottom: 1px solid @gray-light;
 }
@@ -16,4 +15,51 @@
   right: 0;
   background-color: transparent;
   border: none;
+}
+
+.header__info {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    border-top: none;
+  }
+
+  .header__logo {
+    display: flex;
+    height: 88px;
+    margin: 0 auto 0 0;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__info {
+    .font(15px; 24px);
+
+    position: absolute;
+    right: 30px;
+    top: 100px;
+
+    display: block;
+    width: 260px;
+    margin: 0;
+    padding: 10px 0;
+
+    font-weight: 400;
+    text-align: right;
+    color: @gray-darken;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__logo {
+    margin: 0 auto;
+  }
+
+  .header__info {
+    right: 50px;
+  }
 }
