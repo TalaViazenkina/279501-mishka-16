@@ -105,17 +105,19 @@
       </section>
       <section class="making">
         <h2 class="making__title">Процесс производства</h2>
-        <div class="video making__video">
-          <video class="video__content"  preload="none" width="260" height="150" poster="http://placehold.it/260x150">
+        <div class="making__inner">
+          <video class="making__video"  preload="none" width="260" height="150" poster="http://placehold.it/260x150">
             <!-- источники видео -->
             <source src="video.mp4" type="video/mp4">
             <source src="video.ogv" type="video/ogg">
             <source src="video.webm" type="video/webm">
           </video>
-          <button class="video__control">Воспроизвести</button>
+          <button class="making__control">
+            <span class="visually-hidden">Воспроизвести</span>
+          </button>
         </div>
         <p class="making__description"> По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a href="#" class="button">Сделать заказ</a>
+        <a href="#" class="button making__order">Сделать заказ</a>
       </section>
     </div>
   </main>
