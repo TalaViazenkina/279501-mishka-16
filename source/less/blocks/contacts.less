@@ -1,11 +1,36 @@
+.contacts {
+  padding: 50px 0 30px;
+}
+
+.contacts__inner {
+  padding: 0 30px;
+}
+
+.contacts__title {
+  .font(18px; 30px);
+  margin-bottom: 25px;
+}
+
 .contacts__list {
   .list-off();
   .font(15px; 30px);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 10px;
+
   font-weight: 400;
   color: @gray-darken;
 }
 
+.contacts__item {
+  width: 65px;
+  margin-right: 10px;
+}
+
 .contacts__value {
+  width: 185px;
   margin: 0 0 30px;
 }
 
@@ -14,5 +39,95 @@
 }
 
 .contacts__map {
-  margin: 0 0 39px;
+  .size(320px; 457px);
+  margin: 0 0 40px;
+
+  background-color: @gray-lightest; //временно для сетки
+}
+
+.contacts__write {
+  margin: 0 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    padding: 60px 0 57px;
+  }
+
+  .contacts__inner {
+    padding: 0 50px;
+  }
+
+  .contacts__title {
+    .font(43px; 50px);
+    padding: 16px 0;
+
+    background-image: url("../../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-position: right 0 top 0;
+  }
+
+  .contacts__list {
+    .font(17px; 30px);
+    margin-right: 30px;
+    margin-bottom: 25px;
+  }
+
+  .contacts__value {
+    width: auto;
+  }
+
+  .contacts__value:first-of-type {
+    margin-right: auto;
+  }
+
+  .contacts__map {
+    .size(768px; 457px);
+    margin-bottom: 55px;
+  }
+
+  .contacts__write {
+    margin: 220px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+    display: flex;
+    padding: 95px 0 105px;
+  }
+
+  .contacts__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 525px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__title {
+    .font(53px; 57px);
+    padding-left: 175px;
+    background-position: 63px 0;
+  }
+
+  .contacts__list {
+    padding-left: 175px;
+    margin: 0;
+  }
+
+  .contacts__map {
+    .size(525px; 457px);
+    margin-bottom: 0;
+  }
+
+  .contacts__write {
+    position: absolute;
+    left: 225px;
+    bottom: 105px;
+
+    min-width: 230px;
+    margin: 0;
+  }
 }
