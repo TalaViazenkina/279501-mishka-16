@@ -1,4 +1,48 @@
 .radio__label {
+  position: relative;
   display: block;
   padding: 10px 0 10px 62px;
+
+  &::before {
+    .pseudo(36px; 36px);
+
+    top: 0;
+    left: 0;
+
+    border-radius: 50%;
+    border: 2px solid @gray-darken;
+  }
+
+  &::after {
+    .pseudo(16px; 16px);
+
+    top: 12px;
+    left: 12px;
+
+    display: none;
+
+    background-color: #62d1ba;
+    border-radius: 50%;
+  }
+}
+
+.radio__control:checked ~ .radio__label::after {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .radio__label {
+    padding: 17px 0 17px 80px;
+
+    &::before {
+      .size(48px; 48px);
+    }
+
+    &::after {
+      .size(22px; 22px);
+
+      top: 15px;
+      left: 15px;
+    }
+  }
 }

@@ -8,6 +8,33 @@
   margin-bottom: 20px;
   padding: 14px 0;
 
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid @black;
+}
+
+.input:last-child .input__control {
+  margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .input {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .input__label {
+    margin-right: 25px;
+  }
+
+  .input__control {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input__control {
+    margin-right: 175px;
+    margin-bottom: 5px;
+  }
 }
