@@ -2,16 +2,81 @@
   border-top: 1px solid @gray-light;
 }
 
+.search-form__label {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__icon {
+  .size(18px; 18px);
+  order: -1;
+  flex-shrink: 0;
+  padding: 0 15px 0 32px;
+
+  path {
+    fill: rgba(@mine-shaft, 0.2);
+  }
+}
+
+.search-form:hover path {
+  fill: @downy;
+}
+
+.search-form__input:focus ~ .search-form__icon path {
+  fill: rgba(@downy, 0.3);
+}
+
 .search-form__input {
   box-sizing: border-box;
-  width: 100%;
-  padding: 27px 30px 27px 75px;
+  padding: 27px 30px 27px 10px;
 
   font: inherit;
   color: @black;
 
   border: none;
+
+  &::-webkit-input-placeholder {
+    color: @black;
+  }
+
+  &::-moz-placeholder {
+    color: @black;
+  }
+
+  &:-ms-input-placeholder {
+    color: @black;
+  }
 }
+
+.search-form__input:hover {
+  &::-webkit-input-placeholder {
+    color: rgba(@black, 0.6);
+  }
+
+  &::-moz-placeholder {
+    color: rgba(@black, 0.6);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(@black, 0.6);
+  }
+}
+
+/* Для браузеров, в которых при фокусе плейсхолдер исчезает только при начале набора */
+.search-form__input:focus {
+  &::-webkit-input-placeholder {
+    color: rgba(@black, 0.3);
+  }
+
+  &::-moz-placeholder {
+    color: rgba(@black, 0.3);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(@black, 0.3);
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .search-form {
@@ -20,12 +85,23 @@
   }
 
   .search-form__label {
-    display: block;
+
     width: 82px; //временно
     height: 88px; //временно
   }
 
+  /* Скрываем доступно, чтобы можно было передать фокус */
   .search-form__input {
-    display: none;
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
   }
 }
