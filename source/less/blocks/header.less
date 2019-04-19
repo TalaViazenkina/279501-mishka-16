@@ -1,5 +1,12 @@
 .header {
+  min-height: 78px;
   border-top: 1px solid @gray-light;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+
   border-bottom: 1px solid @gray-light;
 }
 
@@ -10,15 +17,81 @@
 
 .header__toggle {
   .size(82px; 78px);
+
   position: absolute;
   top: 0;
   right: 0;
+
   background-color: transparent;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.header__info {
+.header__inner_closed .header__toggle::before {
+  .pseudo(20px; 2px);
+
+  top: 37px;
+  right: 30px;
+
+  background-color: @mine-shaft;
+  box-shadow:
+    0 -6px 0 0 @mine-shaft,
+    0 6px 0 0 @mine-shaft;
+}
+
+.header__inner_opened .header__toggle {
+  &::before,
+  &::after {
+    .pseudo(2px; 28px);
+
+    top: 24px;
+    right: 39px;
+
+    background-color: @mine-shaft;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header__text {
   display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .header__inner_closed .header__main-nav {
+    display: none;
+  }
+
+  .header__inner_closed .header__search {
+    display: none;
+  }
+
+  .header__inner_closed .header__cart {
+    display: none;
+  }
+
+  .header__inner_opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: @white;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -26,8 +99,16 @@
     border-top: none;
   }
 
+  .header__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+
+    border-bottom: none;
+  }
+
   .header__logo {
-    display: flex;
     height: 88px;
     margin: 0 auto 0 0;
   }
@@ -36,13 +117,17 @@
     display: none;
   }
 
-  .header__info {
+  .header__main-nav {
+    align-self: flex-end;
+    order: 1;
+    width: 400px;
+  }
+
+  .header__text {
     .font(15px; 24px);
 
-    position: absolute;
-    right: 30px;
-    top: 100px;
-
+    align-self: flex-end;
+    order: 1;
     display: block;
     width: 260px;
     margin: 0;
@@ -59,7 +144,16 @@
     margin: 0 auto;
   }
 
-  .header__info {
+  .header__main-nav {
+    order: -1;
+    width: 440px;
+  }
+
+  .header__search {
+    margin-left: 92px;
+  }
+
+  .header__text {
     right: 50px;
   }
 }
