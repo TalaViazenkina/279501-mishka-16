@@ -9,7 +9,8 @@
 <body>
   <header class="header container">
     <!-- Шапка переделана для соответствия критерию Б16 "Для микросеток использованы флексбоксы."-->
-    <div class="header__inner">
+    <!-- класс header__inner_nojs  - сотстояние меню при отключенном js; класс header__inner_opened - меню открыто; класс header__inner_closed - меню закрыто -->
+    <div class="header__inner header__inner_opened header__inner_nojs">
       <a class="header__logo logo" href="index.html">
         <img class="logo__image" src="http://placehold.it/100x45" width="100" height="45" alt="Логотип интернет-магазина вязаных игрушек Mishka">
       </a>
@@ -171,6 +172,29 @@
     <button class="button button_theme_decor modal-adding__order" type="button">Добавить</button>
   </section>
   <div class="overlay"></div>
+
+  <script>
+    var navMain = document.querySelector(".header__inner");
+    var navToggle = document.querySelector(".header__toggle");
+
+    navMain.classList.remove("header__inner_nojs");
+
+    if(navMain.classList.contains("header__inner_opened")) {
+      navMain.classList.remove("header__inner_opened");
+      navMain.classList.add("header__inner_closed");
+    }
+
+    navToggle.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      if (navMain.classList.contains("header__inner_closed")) {
+        navMain.classList.remove("header__inner_closed");
+        navMain.classList.add("header__inner_opened");
+      } else {
+        navMain.classList.add("header__inner_closed");
+        navMain.classList.remove("header__inner_opened");
+      }
+    });
+  </script>
 
 </body>
 </html>
