@@ -1,8 +1,11 @@
 .footer {
+  background-color: @gray-lighten;
+}
+
+.footer__container {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
-  background-color: @gray-lighten;
 }
 
 .footer__logo {
@@ -10,7 +13,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .footer {
+  .footer__container {
     flex-direction: row;
     justify-content: space-between;
   }
