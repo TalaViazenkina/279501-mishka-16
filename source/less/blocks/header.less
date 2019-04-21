@@ -6,13 +6,10 @@
 .header__inner {
   display: flex;
   flex-direction: column;
-
-  border-bottom: 1px solid @gray;
 }
 
 .header__logo {
   height: 78px;
-  margin: 0 auto;
 }
 
 .header__toggle {
@@ -89,16 +86,18 @@
   }
 
   .header__inner_opened {
-    position: absolute;
+    position: fixed;
     top: 0;
+    right: 0;
     left: 0;
+    bottom: 0;
     z-index: 2;
-
-    background-color: @white;
+    overflow-y: auto;
   }
 
   .header__inner_nojs {
     position: static;
+    overflow-y: visible;
   }
 
   .header__inner_nojs .header__toggle {
@@ -115,6 +114,25 @@
 
   .header__inner_nojs .header__cart {
     display: block;
+  }
+
+  .header__logo {
+    background: @white;
+    border-bottom: 1px solid @gray;
+  }
+
+  .header__main-nav {
+    background: @white;
+  }
+
+  .header__search {
+    background: @white;
+    border-bottom: 1px solid @gray;
+  }
+
+  .header__cart {
+    background: @white;
+    border-bottom: 1px solid @gray;
   }
 }
 
