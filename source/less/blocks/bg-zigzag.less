@@ -1,0 +1,29 @@
+@media (min-width: @tablet-width) {
+  .bg-zigzag {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      height: 15px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 768px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .bg-zigzag {
+    &::before {
+      height: 23px;
+      background-size: 1050px;
+    }
+  }
+}
