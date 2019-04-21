@@ -47,6 +47,8 @@
 
 @media (min-width: @tablet-width) {
   .popular {
+    display: flex;
+    flex-direction: column;
     padding: 60px 0;
   }
 
@@ -71,23 +73,26 @@
 
   .popular__description {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 290px;
+    min-height: 410px;
     padding-right: 378px;
   }
 
   .popular__text {
     .font(17px; 30px);
-    margin-bottom: 45px;
+    margin-bottom: auto;
   }
 
   .popular__properties {
-    margin-bottom: 55px;
+    margin-bottom: auto;
   }
 
   .popular__image {
     position: absolute;
+    top: 5px;
     right: 0;
-    bottom: 0;
 
     width: 334px;
     height: 405px;
@@ -102,7 +107,9 @@
 
 @media (min-width: @desktop-width) {
   .popular {
-    padding: 125px 0 85px 175px;
+    position: relative;
+    padding: 55px 0 85px 175px;
+    margin-top: 70px;
   }
 
   .popular__inner {
@@ -120,15 +127,9 @@
   }
 
   .popular__description {
+    position: static;
+    min-height: 485px;
     padding-right: 585px;
-  }
-
-  .popular__text {
-    margin-bottom: 55px;
-  }
-
-  .popular__properties {
-    margin-bottom: 110px;
   }
 
   .popular__image {
