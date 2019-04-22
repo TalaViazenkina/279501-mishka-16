@@ -16,10 +16,20 @@
   .footer__container {
     flex-direction: row;
     justify-content: space-between;
+    padding: 50px 0;
   }
 
   .footer__logo {
     display: flex;
     margin-left: 50px;
+
+    &:hover path,
+    &:focus path {
+      fill: @puerto-rico;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

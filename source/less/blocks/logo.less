@@ -1,19 +1,13 @@
-.logo {
-  display: flex;
-
-  &[href]:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &[href]:active {
-    opacity: 0.3;
-  }
-}
-
 .logo__image {
   margin: auto;
   flex-shrink: 0;
   width: 86px;
   height: 36px;
+}
+
+@media (min-width: @tablet-width) {
+  .logo__image {
+    width: 102px;
+    height: 34px;
+  }
 }
