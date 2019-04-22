@@ -30,8 +30,39 @@
   margin: 0 0 30px;
 }
 
-.contacts__value_underline {
-  background-image: linear-gradient(to top, transparent 1px, @downy-dark 1px, @downy-dark 2px, transparent 2px);
+.contacts__email {
+  position: relative;
+  color: @gray-darkest;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+
+    height: 1px;
+
+    background-color: @downy-dark;
+  }
+
+  &:hover,
+  &:focus {
+    color: @puerto-rico;
+
+    &::after {
+      background-color: @puerto-rico;
+    }
+  }
+
+  &:active {
+    color: rgba(@puerto-rico, 0.3);
+
+    &::after {
+      right: 25px;
+      opacity: 0.1;
+    }
+  }
 }
 
 .contacts__map {
