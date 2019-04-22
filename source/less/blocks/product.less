@@ -12,14 +12,15 @@
   position: relative;
   box-sizing: border-box;
   padding: 27px 27px 0;
-  border: 1px solid @gray-light;
+  border: 1px solid @gray;
 }
 
-.product__image:hover ~ .product__description {
+.product:hover .product__description,
+.product:focus .product__description {
   box-shadow: 0 6px 10px 0 rgba(@black; 0.1);
 }
 
-.product__image:active ~ .product__description {
+.product:active .product__description {
   box-shadow: 0 3px 5px 0 rgba(@black; 0.1);
 }
 
@@ -30,29 +31,14 @@
 .product__link {
   .font(17px; 24px);
   color: @black;
-}
 
-.product__shadow {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-
-    display: none;
-
-    box-shadow: 0 6px 10px 0 rgba(@black; 0.1);
+  &:hover,
+  &:focus {
+    color: rgba(@black, 0.6);
   }
 
-  &:hover::after {
-    display: block;
-  }
-
-  &:active::after {
-    box-shadow: 0 3px 5px 0 rgba(@black; 0.1);
+  &:active {
+    color: rgba(@black, 0.3);
   }
 }
 
@@ -79,12 +65,35 @@
 
 .product__button {
   .size(84px; 72px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: -27px;
 
-  background-color: @gray-lighten; //временно для сетки
+  & path {
+    fill: rgba(@mine-shaft, 0.2);
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: @downy;
+  }
+
+  &:active path {
+    fill: rgba(@downy, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .product:hover,
+  .product:focus {
+    box-shadow: 0 6px 10px 0 rgba(@black; 0.1);
+}
+
+  .product:active .product__description {
+  box-shadow: 0 3px 5px 0 rgba(@black; 0.1);
+}
+
   .product__image {
     .size(334px; 334px);
   }
@@ -95,6 +104,12 @@
     width: 334px;
     padding: 27px 33px 0;
   }
+
+  .product:hover .product__description,
+  .product:focus .product__description,
+  .product:active .product__description {
+    box-shadow: none;
+}
 
   .product__title {
     margin: 0;
@@ -120,6 +135,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .product:hover,
+  .product:focus,
+  .product:active {
+    box-shadow: none;
+  }
+
   .product__image {
     .size(316px; 462px);
   }
@@ -129,6 +150,14 @@
     flex-grow: 1;
     padding: 27px 30px 0 27px;
   }
+
+  .product:hover .product__description {
+  box-shadow: 0 6px 10px 0 rgba(@black; 0.1);
+}
+
+  .product:active .product__description {
+  box-shadow: 0 3px 5px 0 rgba(@black; 0.1);
+}
 
   .product__text {
     padding-bottom: 10px;
