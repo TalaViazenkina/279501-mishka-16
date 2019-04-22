@@ -1,7 +1,27 @@
 .making {
+  position: relative;
   margin: 0 30px 58px;
   padding: 25px 0 30px;
   border: 1px solid @gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 245px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    box-shadow: 0 6px 10px 0 rgba(@black; 0.1);
+  }
+
+  &:active::after {
+    box-shadow: 0 3px 5px 0 rgba(@black; 0.1);
+  }
 }
 
 .making__title {
@@ -24,13 +44,28 @@
 }
 
 .making__control {
+  .size(101px; 77px);
+
   position: absolute;
   top: 50%;
   left: 50%;
 
   background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   border: none;
   transform: translate(-50%, -50%);
+
+  &:hover,
+  &:focus {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 .making__description {
@@ -53,6 +88,10 @@
     padding: 0 0 46px;
     margin: 0 50px 63px;
     border-top: none;
+
+    &::after {
+      top: 455px;
+    }
   }
 
   .making__title {
@@ -89,6 +128,10 @@
     padding: 0 0 0 682px;
 
     border-top: 1px solid @gray;
+
+    &::after {
+      top: 0;
+    }
   }
 
   .making__title {
