@@ -1,3 +1,7 @@
+.input {
+  position: relative;
+}
+
 .input__label {
   display: block;
 }
@@ -8,13 +12,50 @@
   margin-bottom: 20px;
   padding: 14px 0;
 
+  .font(17px; 18px);
+  font-weight: 400;
+
   background-color: transparent;
   border: none;
   border-bottom: 2px solid @black;
+
+  &:hover {
+    border-color: @downy-dark;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba(@gray-darkest, 0.3);
+  }
+
+  &::-moz-placeholder {
+    color: rgba(@gray-darkest, 0.3);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(@gray-darkest, 0.3);
+  }
 }
 
 .input:last-child .input__control {
   margin-bottom: 0;
+}
+
+.input__icon {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+}
+
+.input__icon path {
+  fill: rgba(@black, 0.2);
+}
+
+.input__control:hover ~ .input__icon path {
+  fill: @downy-dark;
 }
 
 @media (min-width: @tablet-width) {
@@ -29,6 +70,12 @@
 
   .input__control {
     margin-bottom: 5px;
+    .font(19px; 18px);
+  }
+
+  .input__icon {
+    right: 70px;
+    bottom: 40px;
   }
 }
 
@@ -36,5 +83,10 @@
   .input__control {
     margin-right: 175px;
     margin-bottom: 5px;
+  }
+
+  .input__icon {
+    right: 225px;
+    bottom: 40px;
   }
 }
