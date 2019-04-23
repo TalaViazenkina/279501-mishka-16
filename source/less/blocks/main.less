@@ -27,16 +27,8 @@
 @media (min-width: @tablet-width) {
   .main__title {
     .font(43px; 50px);
-    padding: 50px 0 75px;
-  }
-
-  .main__title_bg {
     position: relative;
-    min-height: 521px;
-    padding: 110px 0 70px;
-
-    background-image: url("../img/hero-tablet@1x.jpg");
-    background-position: center -44px;
+    padding: 50px 0 75px;
 
     &::after {
       content: "";
@@ -53,6 +45,14 @@
       background-position: center top 20px;
       background-size: 768px;
     }
+  }
+
+  .main__title_bg {
+    min-height: 521px;
+    padding: 110px 0 70px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: center -44px;
   }
 
   .main__title_bg br:first-of-type {
