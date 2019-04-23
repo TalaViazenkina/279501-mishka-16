@@ -3,6 +3,10 @@
   display: block;
   padding: 10px 0 10px 62px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &::before {
     .pseudo(36px; 36px);
 
@@ -21,13 +25,23 @@
 
     display: none;
 
-    background-color: #62d1ba;
+    background-color: @downy-dark;
     border-radius: 50%;
   }
 }
 
 .radio__control:checked ~ .radio__label::after {
   display: block;
+}
+
+.radio__label:hover::before,
+.radio__control:focus ~ .radio__label::before {
+  border-color: @downy-dark;
+}
+
+.radio__control:active ~ .radio__label::before {
+  border-color: @gray-darkest;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
