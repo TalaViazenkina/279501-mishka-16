@@ -99,12 +99,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     background-image: url("../../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: content;
+    background-size: contain;
   }
 
   .feedbacks__title {
@@ -113,21 +113,26 @@
 
   .feedbacks__list {
     order: 1;
-    padding-top: 45px;
+    padding-top: 25px;
   }
 
   .feedbacks__content {
     .font(17px; 30px);
+    margin-bottom: 45px;
   }
 
   .feedbacks__author {
-    margin-top: 60px;
+    margin-top: 55px;
+  }
+
+  .feedbacks__author-name {
+    .font(18px; 24px);
   }
 
   .feedbacks__toggles {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 48px;
+    right: 52px;
     margin: 0;
   }
 
@@ -148,6 +153,7 @@
 
   .feedbacks__write {
     min-width: 175px;
+
   }
 }
 
