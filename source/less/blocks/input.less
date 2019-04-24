@@ -4,13 +4,14 @@
 
 .input__label {
   display: block;
+  padding: 9px 0 0;
 }
 
 .input__control {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 20px;
-  padding: 14px 0;
+  padding: 14px 0 14px;
 
   .font(17px; 18px);
   font-weight: 400;
@@ -44,10 +45,21 @@
   margin-bottom: 0;
 }
 
+.input__control[type="tel"] {
+  .font(19px; 18px);
+  margin-bottom: 5px;
+}
+
+.input__control[type="email"] {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+
 .input__icon {
   position: absolute;
-  bottom: 30px;
-  right: 0;
+  top: 60px;
+  right: 5px;
 }
 
 .input__icon path {

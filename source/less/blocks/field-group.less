@@ -10,21 +10,46 @@
 
   display: block;
   width: 100%;
-  padding: 30px 0 20px;
+  padding: 25px 0 20px;
 
   text-transform: uppercase;
   color: @downy;
 
-  &::after {
+   &::after {
     content: "";
     position: absolute;
-    top: 38px;
+    top: 29px;
     right: 0;
     left: 62px;
 
     height: 1px;
 
     background-color: @downy-dark;
+  }
+
+   &_low {
+    padding-top: 15px;
+  }
+
+  &_low::after {
+    top: 23px;
+  }
+
+}
+
+.field-group_icon .field-group__legend {
+  padding-top: 30px;
+  padding-bottom: 0;
+ 
+
+  &::after {
+    top: 35px;
+  }
+}
+
+.field-group__legend[for="email"] {
+  &::after {
+    left: 80px;
   }
 }
 
