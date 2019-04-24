@@ -69,7 +69,14 @@
 @media (min-width: @desktop-width) {
   .main__title {
     .font(53px; 57px);
-    padding: 85px 0 100px;
+    padding: 50px 0 110px;
+
+    &::after {
+      height: 25px;
+
+      background-position: center top -5px;
+      background-size: 1150px 50px;
+    }
   }
 
   .main__title_bg {
@@ -79,10 +86,7 @@
     background-position: center -44px;
 
     &::after {
-      height: 25px;
-
-      background-position: center top 10px;
-      background-size: 1250px;
+      background-size: 1250px 60px;
     }
   }
 
