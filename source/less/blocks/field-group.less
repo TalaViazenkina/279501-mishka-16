@@ -37,7 +37,8 @@
 
 }
 
-.field-group_icon .field-group__legend {
+.field-group_phone .field-group__legend,
+.field-group_email .field-group__legend {
   padding-top: 30px;
   padding-bottom: 0;
  
@@ -66,11 +67,26 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px 50px 26px;
+    padding: 50px 50px 35px;
+    
   }
 
   .field-group_bg {
+    margin: 4px 0 0 0;
+    padding-bottom: 30px;
     background-color: @gray-lighten;
+  }
+
+  .field-group_phone{ 
+    margin: 14px 0 0;
+    padding-top: 35px;
+    padding-bottom: 0;
+  }
+
+  .field-group_email {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 50px;
   }
 
   .field-group__legend {
@@ -93,8 +109,9 @@
 
   .field-group__item {
     .font(19px; 18px);
-    margin-bottom: 24px;
+    
   }
+
 }
 
 @media (min-width: @desktop-width) {
