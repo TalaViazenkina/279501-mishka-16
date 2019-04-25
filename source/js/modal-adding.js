@@ -1,5 +1,6 @@
 var toCart = document.querySelector(".modal-adding");
-var toCartOpen = document.querySelectorAll(".js-cart");
+var toCartOpenList = document.querySelectorAll(".js-cart");
+var toCartOpen = Array.prototype.slice.call(toCartOpenList);
 var toCartAdd = toCart.querySelector(".modal-adding__order");
 var overlay = document.querySelector(".overlay");
 
