@@ -8,6 +8,42 @@
   flex-direction: column;
 }
 
+.header__inner_closed {
+  .header__toggle::before {
+    .pseudo(20px; 2px);
+
+    top: 37px;
+    right: 30px;
+
+    background-color: @mine-shaft;
+    box-shadow:
+      0 -6px 0 0 @mine-shaft,
+      0 6px 0 0 @mine-shaft;
+  }
+}
+
+.header__inner_opened {
+  .header__toggle {
+    &::before,
+    &::after {
+      .pseudo(2px; 28px);
+
+      top: 24px;
+      right: 39px;
+
+      background-color: @mine-shaft;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
 .header__logo {
   display: flex;
   height: 78px;
@@ -42,38 +78,6 @@
   }
 }
 
-.header__inner_closed .header__toggle::before {
-  .pseudo(20px; 2px);
-
-  top: 37px;
-  right: 30px;
-
-  background-color: @mine-shaft;
-  box-shadow:
-    0 -6px 0 0 @mine-shaft,
-    0 6px 0 0 @mine-shaft;
-}
-
-.header__inner_opened .header__toggle {
-  &::before,
-  &::after {
-    .pseudo(2px; 28px);
-
-    top: 24px;
-    right: 39px;
-
-    background-color: @mine-shaft;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-}
-
 .header__second-nav {
   display: none;
 }
@@ -83,16 +87,18 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .header__inner_closed .header__main-nav {
-    display: none;
-  }
+  .header__inner_closed {
+    .header__main-nav {
+      display: none;
+    }
 
-  .header__inner_closed .header__search {
-    display: none;
-  }
+    .header__search {
+      display: none;
+    }
 
-  .header__inner_closed .header__cart {
-    display: none;
+    .header__cart {
+      display: none;
+    }
   }
 
   .header__inner_opened {
@@ -108,22 +114,22 @@
   .header__inner_nojs {
     position: static;
     overflow-y: visible;
-  }
 
-  .header__inner_nojs .header__toggle {
-    display: none;
-  }
+    .header__toggle {
+      display: none;
+    }
 
-  .header__inner_nojs .header__main-nav {
-    display: block;
-  }
+    .header__main-nav {
+      display: block;
+    }
 
-  .header__inner_nojs .header__search {
-    display: block;
-  }
+    .header__search {
+      display: block;
+    }
 
-  .header__inner_nojs .header__cart {
-    display: block;
+    .header__cart {
+      display: block;
+    }
   }
 
   .header__logo {

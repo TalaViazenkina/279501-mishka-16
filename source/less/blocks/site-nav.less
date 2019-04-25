@@ -46,16 +46,16 @@
     border-left: 1px solid @gray;
   }
 
-  .site-nav__item:first-child {
-    border: none;
-  }
-
   .site-nav__link {
     .font(17px; 24px);
     padding: 32px 35px;
   }
 
-  .site-nav__item:first-child .site-nav__link {
-    padding-left: 0;
+  .site-nav__item:first-child {
+    border: none;
+
+    .site-nav__link {
+      padding-left: 0;
+    }
   }
 }

@@ -41,8 +41,10 @@
   }
 }
 
-.input:last-child .input__control {
-  margin-bottom: 0;
+.input:last-child {
+  .input__control {
+    margin-bottom: 0;
+  }
 }
 
 .input__control[type="tel"] {
@@ -59,14 +61,16 @@
   position: absolute;
   top: 60px;
   right: 5px;
+
+  path {
+    fill: rgba(@black, 0.2);
+  }
 }
 
-.input__icon path {
-  fill: rgba(@black, 0.2);
-}
-
-.input__control:hover ~ .input__icon path {
-  fill: @downy-dark;
+.input__control:hover ~ .input__icon {
+  path {
+    fill: @downy-dark;
+  }
 }
 
 @media (min-width: @tablet-width) {
