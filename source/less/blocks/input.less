@@ -55,7 +55,6 @@
   margin-bottom: 5px;
 }
 
-
 .input__icon {
   position: absolute;
   top: 60px;
@@ -74,7 +73,6 @@
   .input {
     display: flex;
     align-items: baseline;
-   
   }
 
   .input__label {
@@ -83,22 +81,19 @@
 
   .input__control {
     .font(19px; 18px);
-     margin-bottom: 20px;
+    margin-bottom: 20px;
     padding-right: 15px;
     padding-left: 15px;
-    
   }
 
   .input__control[type="tel"] {
-  width: 501px;
- 
-}
+    width: 501px;
+  }
 
-.input__control[type="email"] {
-  width: 501px;
-  margin-bottom: 0;
-}
-
+  .input__control[type="email"] {
+    width: 501px;
+    margin-bottom: 0;
+  }
 
   .input__icon {
     right: 70px;
@@ -112,12 +107,20 @@
 
 @media (min-width: @desktop-width) {
   .input__control {
-    margin-right: 175px;
-    margin-bottom: 5px;
+    margin-right: 150px;
+    margin-bottom: 18px;
+  }
+
+  .input__control[type="tel"] {
+    width: 700px;
+  }
+
+  .input__control[type="email"] {
+    width: 700px;
   }
 
   .input__icon {
-    right: 225px;
+    right: 230px;
     bottom: 40px;
   }
 }
