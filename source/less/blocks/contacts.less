@@ -1,10 +1,16 @@
 .contacts {
-  padding: 45px 0 40px;
+  padding: 0 0 40px;
+}
+
+.contacts__inner {
+  max-width: 410px;
+  margin: 0 auto;
+  padding-top: 45px;
 }
 
 .contacts__title {
   .font(18px; 30px);
-  margin: 0 30px 25px;
+  padding: 0 9.4% 25px;
 }
 
 .contacts__list {
@@ -14,19 +20,19 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin: 0 30px 10px;
+  padding: 0 9.4% 10px;
 
   font-weight: 400;
   color: @gray-darkest;
 }
 
 .contacts__item {
-  width: 65px;
-  margin-right: 10px;
+  width: 25%;
+  margin-right: 4%;
 }
 
 .contacts__value {
-  width: 185px;
+  width: 71%;
   margin: 0 0 30px;
 }
 
@@ -66,7 +72,6 @@
 }
 
 .contacts__map {
-  .size(320px; 457px);
   position: relative;
   margin: 0 0 35px;
 
@@ -74,7 +79,9 @@
 }
 
 .contacts__write {
-  margin: 0 30px;
+  width: 81.2%;
+  max-width: 333px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
