@@ -9,8 +9,9 @@
   position: relative;
 
   display: block;
+  box-sizing: border-box;
   width: 100%;
-  padding: 30px 0 20px;
+  padding: 25px 0 20px;
 
   text-transform: uppercase;
   color: @downy;
@@ -18,13 +19,44 @@
   &::after {
     content: "";
     position: absolute;
-    top: 38px;
+    top: 29px;
     right: 0;
     left: 62px;
 
     height: 1px;
 
     background-color: @downy-dark;
+  }
+
+  &_low {
+    padding-top: 15px;
+  }
+
+  &_low::after {
+    top: 23px;
+  }
+}
+
+.field-group_phone {
+  .field-group__legend {
+    padding-top: 30px;
+    padding-bottom: 0;
+
+    &::after {
+      top: 35px;
+    }
+  }
+}
+
+.field-group_email {
+  .field-group__legend {
+    padding-top: 30px;
+    padding-bottom: 0;
+
+    &::after {
+      top: 35px;
+      left: 80px;
+    }
   }
 }
 
@@ -41,11 +73,25 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px 50px 26px;
+    padding: 50px 50px 35px;
   }
 
   .field-group_bg {
-    background-color: @gray-lightest;
+    margin: 4px 0 0 0;
+    padding-bottom: 30px;
+    background-color: @gray-lighten;
+  }
+
+  .field-group_phone {
+    margin: 14px 0 0;
+    padding-top: 35px;
+    padding-bottom: 0;
+  }
+
+  .field-group_email {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 50px;
   }
 
   .field-group__legend {
@@ -58,17 +104,19 @@
   }
 
   .field-group__list {
-    width: 501px;
+    width: 500px;
   }
 
   .field-group__list_col {
     display: flex;
     flex-wrap: wrap;
+    width: 520px;
+    margin-right: -10px;
+    margin-left: -10px;
   }
 
   .field-group__item {
     .font(19px; 18px);
-    margin-bottom: 24px;
   }
 }
 
@@ -80,5 +128,9 @@
 
   .field-group__list {
     width: 850px;
+  }
+
+  .field-group__list_col {
+    width: 792px;
   }
 }

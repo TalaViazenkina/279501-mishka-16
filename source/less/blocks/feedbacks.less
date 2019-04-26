@@ -1,6 +1,6 @@
 .feedbacks__list {
   .list-off();
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .feedbacks__content {
@@ -9,13 +9,13 @@
   margin: 0 0 30px;
 
   font-weight: 400;
-  color: @gray-darken;
+  color: @gray-darkest;
 }
 
 .feedbacks__author {
   .font(17px; 30px);
   display: block;
-  margin-top: 25px;
+  margin-top: 30px;
 
   font-style: normal;
 }
@@ -37,10 +37,10 @@
 
 .feedbacks__toggle {
   position: relative;
-  padding: 23px 42px 23px 39px;
+  padding: 23px 43px 23px 38px;
 
   background-color: transparent;
-  border: 1px solid @gray-light;
+  border: 1px solid @gray;
 
   &::before {
     .size(48px; 4px);
@@ -70,7 +70,7 @@
 
   &::after {
     top: 16px;
-    left: 70px;
+    left: 68px;
     transform: rotate(135deg);
   }
 }
@@ -89,18 +89,22 @@
   }
 }
 
+.feedbacks__write {
+  margin-bottom: 22px;
+}
+
 @media (min-width: @tablet-width) {
   .feedbacks {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
-    background-image: url("../../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: content;
+    background-size: contain;
   }
 
   .feedbacks__title {
@@ -109,21 +113,26 @@
 
   .feedbacks__list {
     order: 1;
-    padding-top: 45px;
+    padding-top: 25px;
   }
 
   .feedbacks__content {
     .font(17px; 30px);
+    margin-bottom: 45px;
   }
 
   .feedbacks__author {
-    margin-top: 60px;
+    margin-top: 55px;
+  }
+
+  .feedbacks__author-name {
+    .font(18px; 24px);
   }
 
   .feedbacks__toggles {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 48px;
+    right: 52px;
     margin: 0;
   }
 
@@ -148,7 +157,24 @@
 }
 
 @media (min-width: @desktop-width) {
+  .feedbacks__list {
+    padding-right: 105px;
+  }
+
   .feedbacks__content {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+  }
+
+  .feedbacks__author {
+    margin-top: 35px;
+  }
+
+  .feedbacks__toggles {
+    right: 3px;
+    bottom: 100px;
+  }
+
+  .feedbacks__write {
+    margin-top: 10px;
   }
 }

@@ -1,15 +1,15 @@
 .popular {
-  padding: 30px 30px 40px;
+  padding: 28px 30px 35px;
 }
 
 .popular__inner {
-  margin: 0 0 20px 0;
+  margin: 0 0 22px 0;
 }
 
 .popular__title {
   .font(25px; 30px);
   color: @black;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
 .popular__label {
@@ -22,12 +22,12 @@
 .popular__text {
   .font(15px; 24px);
   font-weight: 400;
-  color: @gray-darken;
+  color: @gray-darkest;
   margin: 0 0 15px;
 }
 
 .popular__properties {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .popular__image {
@@ -35,26 +35,28 @@
   height: 315px;
   margin: 0 0 25px 0;
 
-  background-color: @gray-lightest; //временно для сетки
+  background-color: @gray-lighten; //временно для сетки
 }
 
 .popular__price {
   .font(17px; 24px);
   text-align: center;
-  color: @gray-darken;
-  margin: 0 0 20px;
+  color: @gray-darkest;
+  margin: 0 0 25px;
 }
 
 @media (min-width: @tablet-width) {
   .popular {
-    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 0 50px;
   }
 
   .popular__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 
   .popular__title {
@@ -71,23 +73,26 @@
 
   .popular__description {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 290px;
+    min-height: 410px;
     padding-right: 378px;
   }
 
   .popular__text {
     .font(17px; 30px);
-    margin-bottom: 45px;
+    margin-bottom: auto;
   }
 
   .popular__properties {
-    margin-bottom: 55px;
+    margin-bottom: auto;
   }
 
   .popular__image {
     position: absolute;
+    top: 5px;
     right: 0;
-    bottom: 0;
 
     width: 334px;
     height: 405px;
@@ -96,13 +101,17 @@
 
   .popular__price {
     .font(20px; 24px);
+    margin-top: 20px;
     margin-bottom: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .popular {
-    padding: 125px 0 85px 175px;
+    position: relative;
+    min-height: 636px;
+    padding: 55px 0 20px 175px;
+    margin-top: 70px;
   }
 
   .popular__inner {
@@ -120,20 +129,18 @@
   }
 
   .popular__description {
+    position: static;
+    min-height: 475px;
     padding-right: 585px;
-  }
-
-  .popular__text {
-    margin-bottom: 55px;
-  }
-
-  .popular__properties {
-    margin-bottom: 110px;
   }
 
   .popular__image {
     z-index: -1;
     width: 525px;
     height: 636px;
+  }
+
+  .popular__price {
+    margin-top: 60px;
   }
 }

@@ -1,5 +1,5 @@
 .section {
-  padding: 30px;
+  padding: 35px 30px 20px;
 }
 
 .section__title {
@@ -9,7 +9,8 @@
 
 @media (min-width: @tablet-width) {
   .section {
-    padding: 80px 50px 30px;
+    margin: 0 0 65px;
+    padding: 70px 50px 0;
   }
 
   .section__title {
@@ -19,8 +20,12 @@
 
 @media (min-width: @desktop-width) {
   .section {
-    padding-left: 175px;
-    margin: 0 50px;
+    padding: 70px 0 0 175px;
+    margin: 0 50px 60px;
+
+    &_high {
+      padding-top: 83px;
+    }
   }
 
   .section__title {

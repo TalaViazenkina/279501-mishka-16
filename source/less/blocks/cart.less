@@ -1,8 +1,8 @@
 .cart {
+  position: relative;
   display: block;
   padding: 27px 30px 27px 75px;
   color: @black;
-  border-top: 1px solid @gray-light;
 
   &:hover,
   &:focus {
@@ -14,11 +14,35 @@
   }
 }
 
+.cart__icon {
+  .size(21px; 19px);
+
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  path {
+    fill: rgba(@mine-shaft, 0.2);
+  }
+}
+
+.cart:hover path {
+  fill: @downy;
+}
+
+.cart:active path {
+  fill: rgba(@downy, 0.3);
+}
+
 @media (min-width: @tablet-width) {
   .cart {
-    padding: 32px 0 32px 80px;
+    padding: 32px 0 32px 83px;
 
     border-top: none;
-    border-left: 1px solid @gray-light;
+    border-left: 1px solid @gray;
+  }
+
+  .cart__icon {
+    top: 35px;
   }
 }

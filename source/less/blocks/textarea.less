@@ -10,10 +10,38 @@
   margin-bottom: 15px;
 
   border: 2px solid @black;
+
+  &:hover {
+    border-color: @downy-dark;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba(@gray-darkest, 0.3);
+  }
+
+  &::-moz-placeholder {
+    color: rgba(@gray-darkest, 0.3);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(@gray-darkest, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .textarea__control {
+    .font(19px; 18px);
+    width: 501px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .textarea__control {
+    width: 700px;
     margin-right: 175px;
   }
 }

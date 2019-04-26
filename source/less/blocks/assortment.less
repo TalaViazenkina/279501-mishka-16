@@ -3,16 +3,45 @@
 }
 
 .assortment__link {
+  position: relative;
   .font(19px; 24px);
   display: block;
-  padding: 27px 160px 27px 30px;
+  margin-top: -5px;
+  padding: 26px 160px 30px 30px;
+
   color: @white;
+
   background-color: @downy;
+  background-clip: padding-box;
+  border-top: 5px solid transparent;
+
+  &::after {
+    .pseudo(61px; 61px);
+
+    top: 25px;
+    right: 25px;
+
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .assortment__link_bg_interior {
   &:hover {
+    padding-bottom: 35px;
+
     background-color: @viking;
+    border-top: none;
   }
 
   &:active {
@@ -24,26 +53,49 @@
   background-color: @fountain-blue;
 
   &:hover {
+    padding-bottom: 35px;
+
     background-color: @puerto-rico;
+    border-top: none;
   }
 
   &:active {
     color: rgba(@white, 0.3);
+  }
+
+  &::after {
+    top: 20px;
+    right: 28px;
+    background-image: url("../img/icon-toy.svg");
   }
 }
 
 @media (min-width: @tablet-width) {
   .assortment {
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: -120px;
   }
 
   .assortment__item {
-    box-sizing: border-box;
     width: 50%;
   }
 
   .assortment__link {
     .font(20px; 30px);
-    padding: 30px 160px 30px 30px;
+    padding: 30px 160px 30px 35px;
+
+    &:hover {
+      padding-bottom: 35px;
+    }
+
+    &::after {
+      top: 30px;
+    }
+
+    &_bg_toys::after {
+      right: 34px;
+    }
   }
 }
