@@ -73,7 +73,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px 50px 35px;
+    padding: 50px 6.5% 35px;
   }
 
   .field-group_bg {
@@ -95,7 +95,7 @@
   }
 
   .field-group__legend {
-    width: 167px;
+    width: 25%;
     padding: 18px 0;
 
     &::after {
@@ -104,13 +104,13 @@
   }
 
   .field-group__list {
-    width: 500px;
+    width: 75%;
   }
 
   .field-group__list_col {
     display: flex;
     flex-wrap: wrap;
-    width: 520px;
+    width: calc(75% + 20px);
     margin-right: -10px;
     margin-left: -10px;
   }
@@ -121,6 +121,28 @@
 }
 
 @media (min-width: @desktop-width) {
+  .field-group {
+    padding: 50px 50px 35px;
+  }
+
+  .field-group_bg {
+    margin-top: 10px;
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+
+  .field-group_phone {
+    margin: 15px 0 0;
+    padding-top: 35px;
+    padding-bottom: 0;
+  }
+
+  .field-group_email {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 50px;
+  }
+
   .field-group__legend {
     width: 175px;
     padding-left: 60px;
