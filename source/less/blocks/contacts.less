@@ -3,14 +3,15 @@
 }
 
 .contacts__inner {
+  box-sizing: border-box;
   max-width: 410px;
   margin: 0 auto;
-  padding-top: 45px;
+  padding: 45px 9.4% 0;
 }
 
 .contacts__title {
   .font(18px; 30px);
-  padding: 0 9.4% 25px;
+  margin: 0;
 }
 
 .contacts__list {
@@ -20,19 +21,20 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding: 0 9.4% 10px;
+  padding: 0 0 10px;
 
   font-weight: 400;
   color: @gray-darkest;
 }
 
 .contacts__item {
-  width: 25%;
-  margin-right: 4%;
+  box-sizing: border-box;
+  width: 30%;
+  padding-right: 5%;
 }
 
 .contacts__value {
-  width: 71%;
+  width: 70%;
   margin: 0 0 30px;
 }
 
@@ -86,13 +88,17 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    padding: 70px 0 57px;
+    padding: 5px 0 57px;
+  }
+
+  .contacts__inner {
+    max-width: 1050px;
+    padding: 65px 6.5% 0;
   }
 
   .contacts__title {
     .font(43px; 50px);
     padding: 16px 0;
-    margin: 0 50px;
 
     background-image: url("../../img/icon-flag.svg");
     background-repeat: no-repeat;
@@ -101,19 +107,19 @@
 
   .contacts__list {
     .font(17px; 30px);
-    margin: 32px 80px 25px 50px;
+    margin: 32px 0 15px 0;
+  }
+
+  .contacts__item {
+    width: 11.5%;
+    padding-right: 2%;
   }
 
   .contacts__value {
-    width: auto;
-  }
-
-  .contacts__value:first-of-type {
-    margin-right: 55px;
+    width: 38.5%;
   }
 
   .contacts__map {
-    .size(768px; 457px);
     margin-bottom: 55px;
   }
 
@@ -129,9 +135,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 457px;
-    padding: 100px 525px 105px 0;
-    margin: 0 50px;
+    width: 1050px;
+    min-height: 552px;
+    padding: 0 50px 105px 50px;
+    margin: 0 auto;
+  }
+
+  .contacts__inner {
+    min-height: 500px;
+    padding: 100px 525px 0 0;
   }
 
   .contacts__title {
@@ -146,17 +158,25 @@
     padding-left: 175px;
   }
 
+  .contacts__item {
+    width: 22%;
+  }
+
+  .contacts__value {
+    width: 78%;
+  }
+
   .contacts__map {
     .size(525px; 457px);
 
     position: absolute;
     top: 95px;
-    right: 0;
+    right: 50px;
     margin-bottom: 0;
   }
 
   .contacts__write {
     width: 230px;
-    margin: 0 0 0 175px;
+    margin: 0 525px 0 175px;
   }
 }

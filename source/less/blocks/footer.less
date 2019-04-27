@@ -21,7 +21,7 @@
 
   .footer__logo {
     display: flex;
-    margin: 0 auto 0 50px;
+    margin: 0 auto 0 6.5%;
 
     &:hover path,
     &:focus path {
@@ -31,5 +31,11 @@
     &:active {
       opacity: 0.3;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__logo {
+    margin: 0 auto 0 50px;
   }
 }

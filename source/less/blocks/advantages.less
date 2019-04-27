@@ -5,11 +5,17 @@
 /* Разобраться с изменением цвета svg */
 .advantages__item {
   .font(17px; 20px);
-  width: 250px;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 4%;
   padding-top: 83px;
   background-image: url("../img/icon-feature-flower.svg");
   background-repeat: no-repeat;
   background-position: 8px 30px;
+
+  &_ecology {
+    padding-right: 65px;
+  }
 
   &_nordic {
     background-image: url("../img/icon-feature-money.svg");
@@ -46,9 +52,17 @@
 
   .advantages__item {
     .font(20px; 22px);
-    width: 295px;
+    width: 50%;
+    padding-right: 8%;
     padding-bottom: 28px;
-    margin-right: 39px;
+
+    &_ecology {
+      padding-right: 16.5%;
+    }
+
+    &_support {
+      padding-right: 3%;
+    }
   }
 
   .advantages__item:nth-child(2),
@@ -64,10 +78,12 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
-    padding-right: 50px;
+    padding-right: 175px;
   }
 
   .advantages__item {
-    margin-right: 55px;
+    &_ecology {
+      padding-right: 130px;
+    }
   }
 }
