@@ -39,11 +39,11 @@
 
 .making__inner {
   position: relative;
-  width: calc(100% + 2px);
-  margin: 0 -1px 30px;
+  margin: 0 0 30px;
 }
 
 .making__video {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -91,7 +91,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 0 46px;
-    margin: 0 50px 63px;
+    margin: 0 6.5% 63px;
     border-top: none;
 
     &::after {
@@ -101,27 +101,27 @@
 
   .making__title {
     .font(20px; 24px);
-    padding: 40px 42px 30px 105px;
+    padding: 40px 6.3% 30px 15.7%;
 
-    background-position: left 42px bottom 25px;
+    background-position: left 6.3% bottom 25px;
     border-top: 1px solid @gray;
   }
 
   .making__inner {
-    .size(668px; 455px);
     order: -1;
-    margin: 0 -1px;
+    min-height: 455px;
+    margin: 0;
 
     background-color: @gray-lighten; //временно для сетки
   }
 
   .making__description {
     .font(15px; 30px);
-    padding: 0 42px;
+    padding: 0 6.3%;
   }
 
   .making__order {
-    margin: 10px 42px 0;
+    margin: 10px 6.3% 0;
   }
 }
 
