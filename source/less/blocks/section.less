@@ -1,16 +1,22 @@
 .section {
-  padding: 35px 9.4% 20px;
+  padding-right: 9.4%;
+  padding-left: 9.4%;
 }
 
 .section__title {
   .font(25px; 30px);
-  margin: 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .section__title_size_s {
+    .font(18px; 30px);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .section {
-    margin: 0 0 65px;
-    padding: 70px 6.5% 0;
+    padding-right: 6.5%;
+    padding-left: 6.5%;
   }
 
   .section__title {
@@ -20,12 +26,10 @@
 
 @media (min-width: @desktop-width) {
   .section {
-    padding: 70px 0 0 175px;
-    margin: 0 50px 60px;
-
-    &_high {
-      padding-top: 83px;
-    }
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-right: 0;
+    padding-left: 175px;
   }
 
   .section__title {

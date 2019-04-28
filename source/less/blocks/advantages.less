@@ -1,4 +1,13 @@
 .advantages {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.advantages__title {
+  margin: 0;
+}
+
+.advantages__list {
   .list-off();
 }
 
@@ -12,10 +21,6 @@
   background-image: url("../img/icon-feature-flower.svg");
   background-repeat: no-repeat;
   background-position: 8px 30px;
-
-  &_ecology {
-    padding-right: 65px;
-  }
 
   &_nordic {
     background-image: url("../img/icon-feature-money.svg");
@@ -45,9 +50,17 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    padding-top: 68px;
+    padding-bottom: 55px;
+  }
+
+  .advantages__title {
+    margin-bottom: 20px;
+  }
+
+  .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
   }
 
   .advantages__item {
@@ -55,10 +68,6 @@
     width: 50%;
     padding-right: 8%;
     padding-bottom: 28px;
-
-    &_ecology {
-      padding-right: 16.5%;
-    }
 
     &_support {
       padding-right: 3%;
@@ -78,12 +87,11 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
-    padding-right: 175px;
+    padding-top: 82px;
+    padding-bottom: 60px;
   }
 
-  .advantages__item {
-    &_ecology {
-      padding-right: 130px;
-    }
+  .advantages__list {
+    padding-right: 175px;
   }
 }

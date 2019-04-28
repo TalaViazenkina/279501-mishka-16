@@ -76,6 +76,8 @@
     justify-content: center;
     align-items: flex-end;
     margin-top: -120px;
+    padding-right: 6.5%;
+    padding-left: 6.5%;
   }
 
   .assortment__item {
@@ -97,5 +99,14 @@
     &_bg_toys::after {
       right: 34px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .assortment {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 50px;
+    margin-left: 50px;
   }
 }
