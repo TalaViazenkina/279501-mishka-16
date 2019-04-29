@@ -4,13 +4,13 @@
 
 .input__label {
   display: block;
-  padding: 9px 0 0;
+  padding: 8px 0 0;
 }
 
 .input__control {
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding: 14px 0 14px;
 
   .font(17px; 18px);
@@ -41,25 +41,13 @@
   }
 }
 
-.input:last-child {
-  .input__control {
-    margin-bottom: 0;
-  }
-}
-
 .input__control[type="tel"] {
   .font(19px; 18px);
-  margin-bottom: 5px;
-}
-
-.input__control[type="email"] {
-  margin-top: 10px;
-  margin-bottom: 5px;
 }
 
 .input__icon {
   position: absolute;
-  top: 60px;
+  top: 35px;
   right: 5px;
 
   path {
@@ -96,15 +84,14 @@
 
   .input__control[type="email"] {
     width: 75%;
-    margin-bottom: 0;
   }
 
   .input__icon {
-    right: 70px;
-    bottom: 40px;
+    top: 65px;
+    right: 75px;
 
     &_email {
-      top: 30px;
+      top: 15px;
     }
   }
 }
@@ -112,7 +99,9 @@
 @media (min-width: @desktop-width) {
   .input__control {
     margin-right: 150px;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .input__control[type="tel"] {

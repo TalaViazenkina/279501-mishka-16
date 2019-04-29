@@ -1,6 +1,5 @@
 .field-group {
   margin: 0;
-  padding: 0;
   border: none;
 }
 
@@ -11,7 +10,7 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: 25px 0 20px;
+  margin-bottom: 20px;
 
   text-transform: uppercase;
   color: @downy;
@@ -19,43 +18,22 @@
   &::after {
     content: "";
     position: absolute;
-    top: 29px;
+    top: 8px;
     right: 0;
-    left: 24%;
+    left: 62px;
 
     height: 1px;
 
     background-color: @downy-dark;
   }
 
-  &_low {
-    padding-top: 15px;
+  &_margin_s {
+    margin-bottom: 5px;
   }
 
-  &_low::after {
-    top: 23px;
-  }
-}
-
-.field-group_phone {
-  .field-group__legend {
-    padding-top: 30px;
-    padding-bottom: 0;
-
+  &_email {
     &::after {
-      top: 35px;
-    }
-  }
-}
-
-.field-group_email {
-  .field-group__legend {
-    padding-top: 30px;
-    padding-bottom: 0;
-
-    &::after {
-      top: 35px;
-      left: 31%;
+      left: 80px;
     }
   }
 }
@@ -73,25 +51,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px 6.5% 35px;
+    padding-right: 6.5%;
+    padding-left: 6.5%;
   }
 
   .field-group_bg {
-    margin: 4px 0 0 0;
-    padding-bottom: 30px;
     background-color: @gray-lighten;
-  }
-
-  .field-group_phone {
-    margin: 14px 0 0;
-    padding-top: 35px;
-    padding-bottom: 0;
-  }
-
-  .field-group_email {
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 50px;
   }
 
   .field-group__legend {
@@ -122,30 +87,13 @@
 
 @media (min-width: @desktop-width) {
   .field-group {
-    padding: 50px 50px 35px;
-  }
-
-  .field-group_bg {
-    margin-top: 10px;
-    padding-top: 45px;
-    padding-bottom: 30px;
-  }
-
-  .field-group_phone {
-    margin: 15px 0 0;
-    padding-top: 35px;
-    padding-bottom: 0;
-  }
-
-  .field-group_email {
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .field-group__legend {
     width: 175px;
-    padding-left: 60px;
+    padding-left: 63px;
   }
 
   .field-group__list {
