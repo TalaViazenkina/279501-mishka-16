@@ -18,9 +18,13 @@
   .size(40px; 40px);
   display: flex;
 
-  &:hover path,
-  &:focus path {
-    fill: @puerto-rico;
+  &:hover,
+  &:focus {
+    outline: none;
+
+    path {
+      fill: @puerto-rico;
+    }
   }
 
   &:active {

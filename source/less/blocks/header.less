@@ -51,6 +51,7 @@
   &[href]:hover,
   &:focus {
     opacity: 0.6;
+    outline: none;
   }
 
   &[href]:active {
@@ -69,8 +70,10 @@
   border: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
+    outline: none;
   }
 
   &:active {

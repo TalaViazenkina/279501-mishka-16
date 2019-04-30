@@ -24,9 +24,13 @@
     display: flex;
     margin: 0 auto 0 50px;
 
-    &:hover path,
-    &:focus path {
-      fill: @puerto-rico;
+    &:hover,
+    &:focus {
+      outline: none;
+
+      path {
+        fill: @puerto-rico;
+      }
     }
 
     &:active {

@@ -83,7 +83,10 @@
   }
 }
 
-.feedbacks__toggle:hover {
+.feedbacks__toggle:hover,
+.feedbacks__toggle:focus {
+  outline: none;
+
   &::before,
   &::after {
     opacity: 0.6;
