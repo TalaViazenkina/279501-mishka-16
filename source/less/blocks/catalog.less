@@ -13,7 +13,6 @@
   }
 
   .catalog__item {
-    display: flex;
     margin-bottom: 54px;
   }
 }
@@ -28,9 +27,10 @@
   }
 
   .catalog__item {
-    flex-direction: column;
-    width: calc(100% / 3 - 50px);
-    margin-right: 25px;
-    margin-left: 25px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100% / 3;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
