@@ -14,37 +14,26 @@
 /* Разобраться с изменением цвета svg */
 .advantages__item {
   .font(17px; 20px);
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   padding-right: 10px;
   padding-top: 83px;
-  background-image: url("../img/icon-feature-flower.svg");
-  background-repeat: no-repeat;
-  background-position: 8px 30px;
+}
 
-  &_nordic {
-    background-image: url("../img/icon-feature-money.svg");
-    background-position: 0 30px;
-  }
+.advantages__text {
+  margin: 0;
+}
 
-  &_like {
-    background-image: url("../img/icon-feature-heart.svg");
-    background-position: 8px 35px;
-  }
+.advantages__icon {
+  position: absolute;
+  top: 50px;
+  left: 25px;
 
-  &_knitting {
-    background-image: url("../img/icon-feature-ball.svg");
-    background-position: 3px 35px;
-  }
+  transform: translate(-50%, -50%);
 
-  &_support {
-    background-image: url("../img/icon-feature-rocket.svg");
-    background-position: 0 35px;
-  }
-
-  &_gift {
-    background-image: url("../img/icon-feature-gift.svg");
-    background-position: 3px 32px;
+  path {
+    fill: @downy;
   }
 }
 
@@ -66,12 +55,8 @@
   .advantages__item {
     .font(20px; 22px);
     width: 50%;
-    padding-right: 50px;
+    padding-right: 40px;
     padding-bottom: 28px;
-
-    &_support {
-      padding-right: 20px;
-    }
   }
 
   .advantages__item:nth-child(2),
@@ -93,5 +78,9 @@
 
   .advantages__list {
     padding-right: 175px;
+  }
+
+  .advantages__item {
+    padding-right: 55px;
   }
 }
