@@ -1,6 +1,7 @@
 .header {
-  min-height: 79px;
+  min-height: 78px;
   border-top: 1px solid @gray;
+  border-bottom: 1px solid @gray;
 }
 
 .header__inner {
@@ -132,16 +133,17 @@
 
     .header__cart {
       display: block;
+      border-bottom: none;
     }
   }
 
   .header__logo {
     background: @white;
-    border-bottom: 1px solid @gray;
   }
 
   .header__main-nav {
     background: @white;
+    border-top: 1px solid @gray;
   }
 
   .header__search {
@@ -158,6 +160,7 @@
 @media (min-width: @tablet-width) {
   .header {
     border-top: none;
+    border-bottom: none;
     background-image: linear-gradient(to bottom, transparent 88px, @gray 88px, @gray 89px, @gray-lighten 89px);
 
     &_main {
