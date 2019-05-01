@@ -2,10 +2,11 @@
   background-color: @gray-lighten;
 }
 
-.footer__container {
+.footer__inner {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer__logo {
@@ -13,7 +14,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .footer__container {
+  .footer__inner {
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 50px;
@@ -22,7 +23,7 @@
 
   .footer__logo {
     display: flex;
-    margin: 0 auto 0 50px;
+    margin: 0 auto 0 0;
 
     &:hover,
     &:focus {

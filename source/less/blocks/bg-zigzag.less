@@ -5,8 +5,8 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    right: -30px;
+    left: -30px;
 
     height: 10px;
     background-image: url("../img/bg-zigzag-line.svg");
@@ -20,11 +20,8 @@
 @media (min-width: @tablet-width) {
   .bg-zigzag {
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      right: -50px;
+      left: -50px;
 
       height: 20px;
       background-size: 768px 16px;
@@ -35,6 +32,9 @@
 @media (min-width: @desktop-width) {
   .bg-zigzag {
     &::before {
+      right: 0px;
+      left: 0px;
+
       height: 23px;
       background-size: 1050px;
     }
