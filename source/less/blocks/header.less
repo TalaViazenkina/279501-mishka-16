@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   min-height: 78px;
   border-top: 1px solid @gray;
   border-bottom: 1px solid @gray;
@@ -107,20 +108,30 @@
 
   .header__inner_opened {
     position: fixed;
-    top: 1px;
+    top: 0px;
     right: 0;
     left: 0;
     bottom: 0;
     z-index: 2;
     overflow-y: auto;
+
+    .header__logo {
+      border-top: 1px solid @gray;
+    }
   }
 
   .header__inner_nojs {
     position: static;
     overflow-y: visible;
+    margin-right: -30px;
+    margin-left: -30px;
 
     .header__toggle {
       display: none;
+    }
+
+    .header__logo {
+      border-top: none;
     }
 
     .header__main-nav {
