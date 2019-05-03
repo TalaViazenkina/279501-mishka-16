@@ -82,7 +82,6 @@
     box-sizing: border-box;
     width: 50%;
     min-height: 410px;
-    margin-right: 50%;
     padding-right: 44px;
   }
 
@@ -121,17 +120,19 @@
   }
 
   .popular__inner {
-    justify-content: flex-start;
+    position: relative;
     margin-bottom: 48px;
   }
 
   .popular__label {
-    order: -1;
-    padding: 0 25px;
+    position: absolute;
+    top: 15px;
+    left: -155px;
   }
 
   .popular__description {
     position: static;
+    width: 100% / 5 * 2;
     min-height: 475px;
     padding-right: 60px;
   }
