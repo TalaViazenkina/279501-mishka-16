@@ -126,6 +126,7 @@
 @media (min-width: @desktop-width) {
   .contacts {
     position: relative;
+    max-width: @desktop-width;
     min-height: 552px;
     padding-bottom: 105px;
     margin: 0 auto;
@@ -155,11 +156,12 @@
   }
 
   .contacts__map {
-    .size(525px; 457px);
-
     position: absolute;
     top: 95px;
-    right: 50px;
+    left: 50%;
+
+    width: calc(100% / 2 - @tablet-padding);
+    height: 457px;
     margin-bottom: 0;
   }
 
