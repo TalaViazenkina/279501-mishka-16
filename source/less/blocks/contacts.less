@@ -5,9 +5,11 @@
 
 .contacts__inner {
   box-sizing: border-box;
-  max-width: 410px;
-  margin: 0 auto;
   padding-top: 45px;
+}
+
+.contacts__icon {
+  display: none;
 }
 
 .contacts__title {
@@ -87,17 +89,19 @@
   }
 
   .contacts__inner {
-    max-width: 1050px;
     padding-top: 62px;
+  }
+
+  .contacts__icon {
+    position: absolute;
+    top: 62px;
+    right: 0;
+    display: block;
   }
 
   .contacts__title {
     padding: 16px 0;
     margin-bottom: 33px;
-
-    background-image: url("../img/icon-flag.svg");
-    background-repeat: no-repeat;
-    background-position: right 0 top 0;
   }
 
   .contacts__list {
@@ -120,6 +124,7 @@
 
   .contacts__write {
     width: 230px;
+    margin: 0 auto;
   }
 }
 
@@ -133,14 +138,18 @@
   }
 
   .contacts__inner {
-    width: 100%;
     min-height: 500px;
     padding-top: 148px;
   }
 
+  .contacts__icon {
+    top: 155px;
+    left: 65px;
+  }
+
   .contacts__title {
     margin-right: 50%;
-    background-position: 65px 5px;
+
   }
 
   .contacts__list {
