@@ -1,6 +1,8 @@
 .field-group {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   border: none;
 }
 
@@ -8,34 +10,25 @@
   .font(17px; 16px);
   position: relative;
 
-  display: block;
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 20px;
+  padding-top: 31px;
 
   text-transform: uppercase;
   color: @downy;
 
   &::after {
     content: "";
-    position: absolute;
-    top: 8px;
-    right: 0;
-    left: 62px;
 
+    display: block;
+    flex-grow: 1;
     height: 1px;
+    width: 1px;
+    margin-left: 23px;
 
     background-color: @downy-dark;
-  }
-
-  &_margin_s {
-    margin-bottom: 5px;
-  }
-
-  &_email {
-    &::after {
-      left: 80px;
-    }
   }
 }
 
@@ -44,7 +37,7 @@
 }
 
 .field-group__item {
-  .font(17px; 18px);
+  padding-top: 20px;
 }
 
 @media (min-width: @tablet-width) {
