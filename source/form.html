@@ -68,11 +68,11 @@
         <div class="form__inner">
           <legend class="field-group__legend">Тип</legend>
           <ul class="field-group__list">
-            <li class="field-group__item radio">
+            <li class="field-group__item-option radio">
               <input class="visually-hidden radio__control" id="interior" type="radio" name="product-type" value="interior" checked>
               <label class="radio__label" for="interior">Аксессуар для интерьера</label>
             </li>
-            <li class="field-group__item radio">
+            <li class="field-group__item-option radio">
               <input class="visually-hidden radio__control" id="toys" type="radio" name="product-type" value="toys">
               <label class="radio__label" for="toys">Детская игрушка</label>
             </li>
@@ -84,27 +84,27 @@
         <div class="form__inner">
           <legend class="field-group__legend">Цвет</legend>
           <ul class="field-group__list field-group__list_col">
-            <li class="field-group__item checkbox">
+            <li class="field-group__item-option checkbox">
               <input class="visually-hidden checkbox__control" id="white" type="checkbox" name="color-white" checked >
               <label class="checkbox__label" for="white">Белый</label>
             </li>
-            <li class="field-group__item checkbox">
+            <li class="field-group__item-option checkbox">
               <input class="visually-hidden checkbox__control" id="gray" type="checkbox" name="color-gray" checked>
               <label class="checkbox__label" for="gray">Серый</label>
             </li>
-            <li class="field-group__item checkbox">
+            <li class="field-group__item-option checkbox">
               <input class="visually-hidden checkbox__control" id="tiffany" type="checkbox" name="color-tiffany" >
               <label class="checkbox__label" for="tiffany">&laquo;Тиффани&raquo;</label>
             </li>
-            <li class="field-group__item checkbox">
+            <li class="field-group__item-option checkbox">
               <input class="visually-hidden checkbox__control" id="black" type="checkbox" name="color-black" >
               <label class="checkbox__label" for="black">Черный</label>
             </li>
-            <li class="field-group__item checkbox">
+            <li class="field-group__item-option checkbox">
               <input class="visually-hidden checkbox__control" id="pink" type="checkbox" name="color-pink" >
               <label class="checkbox__label" for="pink">Розовый</label>
             </li>
-            <li class="field-group__item  checkbox">
+            <li class="field-group__item-option  checkbox">
               <input class="visually-hidden checkbox__control" id="orange" type="checkbox" name="color-orange" >
               <label class="checkbox__label" for="orange">Оранжевый</label>
             </li>
@@ -116,15 +116,15 @@
         <div class="form__inner">
           <legend class="field-group__legend">ФИО</legend>
           <ul class="field-group__list">
-            <li class="field-group__item input">
+            <li class="field-group__item-text input">
               <label for="name" class="input__label">Имя:</label>
               <input class="input__control" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
             </li>
-            <li class="field-group__item input">
+            <li class="field-group__item-text input">
               <label for="surname" class="input__label">Фамилия:</label>
               <input class="input__control" id="surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
             </li>
-            <li class="field-group__item input">
+            <li class="field-group__item-text input">
               <label for="patronymic" class="input__label">Отчество:</label>
               <input class="input__control" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
             </li>
@@ -156,7 +156,7 @@
           </svg>
         </p>
       </div>
-      <p class="field-group textarea container">
+      <p class="field-group form__inner textarea container">
         <label class="field-group__legend" for="message">Доп</label>
         <textarea class="textarea__control" id="message" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </p>

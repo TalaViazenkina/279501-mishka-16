@@ -7,14 +7,14 @@
 
 .input__label {
   display: block;
-  padding: 0;
+  padding: 21px 0 0;
 }
 
 .input__control {
   box-sizing: border-box;
   width: 100%;
-  height: 50px;
-  margin-top: 6px;
+  height: 48px;
+  margin-top: 8px;
   padding: 15px 0 15px;
 
   .font(17px; 18px);
@@ -65,6 +65,7 @@
 
 @media (min-width: @tablet-width) {
   .input {
+    .font(19px; 18px);
     display: flex;
     align-items: baseline;
   }
@@ -75,47 +76,25 @@
 
   .input__control {
     .font(19px; 18px);
-    margin-bottom: 20px;
+    margin-top: 25px;
     padding-right: 15px;
     padding-left: 15px;
   }
 
-  .input__control[type="tel"] {
-    width: 75%;
-  }
-
-  .input__control[type="email"] {
-    width: 75%;
-  }
-
   .input__icon {
-    top: 65px;
-    right: 75px;
-
-    &_email {
-      top: 15px;
-    }
+    top: 35px;
+    right: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .input__control {
-    margin-right: 150px;
-    margin-bottom: 19px;
+    margin-right: 175px;
     padding-right: 20px;
     padding-left: 20px;
   }
 
-  .input__control[type="tel"] {
-    width: 100% / 3 * 2;
-  }
-
-  .input__control[type="email"] {
-    width: 100% / 3 * 2;
-  }
-
   .input__icon {
-    right: 230px;
-    bottom: 40px;
+    right: 180px;
   }
 }

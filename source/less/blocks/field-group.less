@@ -36,15 +36,14 @@
   .list-off();
 }
 
-.field-group__item {
+.field-group__item-option {
   padding-top: 20px;
 }
 
 @media (min-width: @tablet-width) {
   .field-group {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
 
   .field-group_bg {
@@ -52,8 +51,9 @@
   }
 
   .field-group__legend {
+    flex-shrink: 0;
     width: 25%;
-    padding: 18px 0;
+    padding: 40px 0 0;
 
     &::after {
       display: none;
@@ -72,8 +72,8 @@
     margin-left: -10px;
   }
 
-  .field-group__item {
-    .font(19px; 18px);
+  .field-group__item-option {
+    padding-top: 24px;
   }
 }
 
@@ -84,7 +84,7 @@
   }
 
   .field-group__list {
-    width: 850px;
+    width: 100% / 6 * 5;
   }
 
   .field-group__list_col {

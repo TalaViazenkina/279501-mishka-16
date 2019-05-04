@@ -5,7 +5,7 @@
 .form__info {
   .font(14px; 16px);
 
-  margin: 15px 0 30px;
+  margin: 10px 0 30px;
 
   font-weight: 400;
   color: @gray-darkest;
@@ -17,42 +17,12 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 50px 0 50px;
-  }
-
-  .form__radio {
-    padding-bottom: 43px;
-  }
-
-  .form__checkbox {
-    padding-top: 50px;
-    padding-bottom: 25px;
-  }
-
-  .form__text {
-    padding-top: 50px;
-    padding-bottom: 25px;
-  }
-
-  .form__phone {
-    padding-top: 50px;
-    padding-bottom: 0;
-  }
-
-  .form__email {
-    padding-bottom: 30px;
-  }
-
-  .form__textarea {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 0 0 50px;
   }
 
   .form__inner {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .form__button {
@@ -61,32 +31,13 @@
 
   .form__info {
     .font(17px; 30px);
-    margin: 0;
+    align-self: center;
+    order: 1;
+    margin: 0 0 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form {
-    padding-top: 55px;
-  }
-
-  .form__checkbox {
-    padding-bottom: 30px;
-  }
-
-  .form__text {
-    padding-top: 48px;
-    padding-bottom: 30px;
-  }
-
-  .form__phone {
-    padding-top: 48px;
-  }
-
-  .form__textarea {
-    padding-bottom: 45px;
-  }
-
   .form__info {
     margin-right: 175px;
   }
