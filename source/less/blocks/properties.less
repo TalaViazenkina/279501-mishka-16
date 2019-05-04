@@ -8,7 +8,7 @@
 
 .properties__field {
   box-sizing: border-box;
-  width: 98px / 260px * 100%;
+  width: percentage(98 / 260);
   padding: 10px 10px 10px 0;
   border-bottom: 1px solid @gray;
 }
@@ -20,6 +20,6 @@
 
 @media (min-width: @tablet-width) {
   .properties__field {
-    width: 33.8%;
+    width: percentage(98 / 290);
   }
 }
