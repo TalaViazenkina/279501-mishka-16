@@ -52,6 +52,8 @@
   top: 65px;
   right: 5px;
 
+  transform: translateX(-50%);
+
   path {
     fill: rgba(@black, 0.2);
   }
@@ -66,24 +68,26 @@
 @media (min-width: @tablet-width) {
   .input {
     .font(19px; 18px);
-    display: flex;
-    align-items: baseline;
+
   }
 
   .input__label {
+    padding-top: 20px;
     margin-right: 25px;
   }
 
   .input__control {
     .font(19px; 18px);
-    margin-top: 25px;
+    margin-top: 0;
+    height: 52px;
+    /* margin-top: 25px; */
     padding-right: 15px;
     padding-left: 15px;
   }
 
   .input__icon {
-    top: 35px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
   }
 }
 
