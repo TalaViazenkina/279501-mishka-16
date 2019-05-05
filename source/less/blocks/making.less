@@ -1,7 +1,7 @@
 .making {
   position: relative;
-  margin: 0 30px 58px;
-  padding: 15px 0 30px;
+  margin: 0 0 58px;
+  padding: 25px 0 30px;
   border: 1px solid @gray;
 
   &::after {
@@ -24,6 +24,20 @@
   }
 }
 
+.making__inner {
+  position: relative;
+}
+
+.making__icon {
+  position: absolute;
+  top: 5px;
+  left: 35px;
+
+  path {
+    fill: @downy;
+  }
+}
+
 .making__title {
   .font(17px; 24px);
 
@@ -31,16 +45,17 @@
   padding: 0 34px 22px 90px;
 
   color: @black;
-
-  background-image: url("../../img/icon-video.svg");
-  background-repeat: no-repeat;
-  background-position: left 33px bottom 33px;
 }
 
-.making__inner {
-  .size(260px; 150px);
+.making__video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.making__container {
   position: relative;
-  margin: 0 -1px 30px;
+  margin: 0 0 30px;
 }
 
 .making__control {
@@ -49,17 +64,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 0;
 
   background-color: transparent;
-  background-image: url("../img/icon-play.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
   border: none;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 
   &:hover,
   &:focus {
     transform: translate(-50%, -50%) scale(1.2);
+    outline: none;
   }
 
   &:active {
@@ -86,7 +101,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 0 46px;
-    margin: 0 50px 63px;
+    margin: 0 0 63px;
     border-top: none;
 
     &::after {
@@ -94,18 +109,22 @@
     }
   }
 
+  .making__icon {
+    top: 34px;
+    left: 42px;
+  }
+
   .making__title {
     .font(20px; 24px);
     padding: 40px 42px 30px 105px;
 
-    background-position: left 42px bottom 25px;
     border-top: 1px solid @gray;
   }
 
-  .making__inner {
-    .size(668px; 455px);
+  .making__container {
     order: -1;
-    margin: 0 -1px;
+    min-height: 455px;
+    margin: 0;
 
     background-color: @gray-lighten; //временно для сетки
   }
@@ -124,8 +143,9 @@
   .making {
     position: relative;
     min-height: 453px;
-    margin: 0 50px 105px;
-    padding: 0 0 0 682px;
+    margin: 0 0 105px;
+    padding: 0;
+    padding-left: 100% / 3 * 2;
 
     border-top: 1px solid @gray;
 
@@ -134,15 +154,19 @@
     }
   }
 
+  .making__icon {
+    top: 40px;
+    left: 60px;
+  }
+
   .making__title {
     .font(20px; 24px);
 
-    padding: 96px 57px 30px 80px;
-    background-position: left 80px top 40px;
+    padding: 96px 57px 30px 60px;
     border: none;
   }
 
-  .making__inner {
+  .making__container {
     .size(682px; 455px);
 
     position: absolute;
@@ -154,10 +178,10 @@
   }
 
   .making__description {
-    padding: 0 57px 0 80px;
+    padding: 0 57px 0 60px;
   }
 
   .making__order {
-    margin: 20px 57px 59px 80px;
+    margin: 20px 57px 59px 60px;
   }
 }

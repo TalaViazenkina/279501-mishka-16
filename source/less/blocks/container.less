@@ -1,17 +1,21 @@
 .container {
-  position: relative;
-  width: 320px;
+  box-sizing: border-box;
+  max-width: 410px; //как временный вариант
   margin: 0 auto;
+  padding-right: @mobil-padding;
+  padding-left: @mobil-padding;
 }
 
 @media (min-width: @tablet-width) {
   .container {
-    width: 768px;
+    max-width: @desktop-width - 100px;
+    padding-right: @tablet-padding;
+    padding-left: @tablet-padding;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    width: 1150px;
+    max-width: @desktop-width;
   }
 }

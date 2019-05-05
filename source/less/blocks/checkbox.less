@@ -1,7 +1,11 @@
+.checkbox {
+  .font(17px; 18px);
+}
+
 .checkbox__label {
   position: relative;
   display: block;
-  padding: 13px 0 30px 62px;
+  padding: 11px 0 12px 62px;
 
   &:hover {
     cursor: pointer;
@@ -10,7 +14,7 @@
   &::before {
     .pseudo(36px; 35px);
 
-    top: 3px;
+    top: 0;
     left: 0;
 
     border: 2px solid @gray-darkest;
@@ -46,11 +50,11 @@
 
 @media (min-width: @tablet-width) {
   .checkbox {
+    .font(19px; 18px);
     box-sizing: border-box;
     width: 100% / 2;
     padding-right: 10px;
     padding-left: 10px;
-    margin-bottom: 24px;
   }
 
   .checkbox__label {

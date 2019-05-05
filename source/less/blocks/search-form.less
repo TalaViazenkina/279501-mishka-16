@@ -20,12 +20,6 @@
   }
 }
 
-.search-form__input:focus ~ .search-form__icon {
-  path {
-    fill: rgba(@downy, 0.3);
-  }
-}
-
 .search-form__input {
   box-sizing: border-box;
   padding: 27px 30px 27px 10px;
@@ -62,8 +56,16 @@
   }
 }
 
-/* Для браузеров, в которых при фокусе плейсхолдер исчезает только при начале набора */
 .search-form__input:focus {
+  outline: none;
+
+  & ~ .search-form__icon {
+    path {
+      fill: @downy;
+    }
+  }
+
+  /* Для браузеров, в которых при фокусе плейсхолдер исчезает только при начале набора */
   &::-webkit-input-placeholder {
     color: rgba(@black, 0.3);
   }
@@ -77,6 +79,13 @@
   }
 }
 
+.search-form__input:active {
+  & ~ .search-form__icon {
+    path {
+      fill: rgba(@downy, 0.3);
+    }
+  }
+}
 
 @media (min-width: @tablet-width) {
   .search-form {

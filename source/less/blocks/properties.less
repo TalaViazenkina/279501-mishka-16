@@ -7,7 +7,8 @@
 }
 
 .properties__field {
-  width: 88px;
+  box-sizing: border-box;
+  width: percentage(98 / 260);
   padding: 10px 10px 10px 0;
   border-bottom: 1px solid @gray;
 }
@@ -15,4 +16,10 @@
 .properties__value {
   padding: 10px 10px 10px 0;
   border-bottom: 1px solid @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .properties__field {
+    width: percentage(98 / 290);
+  }
 }

@@ -1,18 +1,14 @@
-.section {
-  padding: 35px 30px 20px;
-}
-
 .section__title {
   .font(25px; 30px);
-  margin: 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .section__title_size_s {
+    .font(18px; 30px);
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .section {
-    margin: 0 0 65px;
-    padding: 70px 50px 0;
-  }
-
   .section__title {
     .font(43px; 50px);
   }
@@ -20,12 +16,7 @@
 
 @media (min-width: @desktop-width) {
   .section {
-    padding: 70px 0 0 175px;
-    margin: 0 50px 60px;
-
-    &_high {
-      padding-top: 83px;
-    }
+    padding-left: 100% / 6;
   }
 
   .section__title {

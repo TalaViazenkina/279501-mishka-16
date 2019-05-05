@@ -1,11 +1,13 @@
-.radio:last-child {
-  margin-bottom: 5px;
+.radio {
+  .font(17px; 18px);
 }
 
 .radio__label {
   position: relative;
+  box-sizing: border-box;
   display: block;
-  padding: 10px 0 15px 62px;
+  min-height: 40px;
+  padding: 10px 0 0 62px;
 
   &:hover {
     cursor: pointer;
@@ -50,9 +52,9 @@
 
 @media (min-width: @tablet-width) {
   .radio {
+    .font(19px; 18px);
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 24px;
   }
 
   .radio__label {

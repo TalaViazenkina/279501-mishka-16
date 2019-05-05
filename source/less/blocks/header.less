@@ -1,6 +1,8 @@
 .header {
+  position: relative;
   min-height: 78px;
   border-top: 1px solid @gray;
+  border-bottom: 1px solid @gray;
 }
 
 .header__inner {
@@ -51,6 +53,7 @@
   &[href]:hover,
   &:focus {
     opacity: 0.6;
+    outline: none;
   }
 
   &[href]:active {
@@ -69,8 +72,10 @@
   border: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
+    outline: none;
   }
 
   &:active {
@@ -109,14 +114,24 @@
     bottom: 0;
     z-index: 2;
     overflow-y: auto;
+
+    .header__logo {
+      border-top: 1px solid @gray;
+    }
   }
 
   .header__inner_nojs {
     position: static;
     overflow-y: visible;
+    margin-right: @mobil-padding * -1;
+    margin-left: @mobil-padding * -1;
 
     .header__toggle {
       display: none;
+    }
+
+    .header__logo {
+      border-top: none;
     }
 
     .header__main-nav {
@@ -129,16 +144,17 @@
 
     .header__cart {
       display: block;
+      border-bottom: none;
     }
   }
 
   .header__logo {
     background: @white;
-    border-bottom: 1px solid @gray;
   }
 
   .header__main-nav {
     background: @white;
+    border-top: 1px solid @gray;
   }
 
   .header__search {
@@ -155,6 +171,7 @@
 @media (min-width: @tablet-width) {
   .header {
     border-top: none;
+    border-bottom: none;
     background-image: linear-gradient(to bottom, transparent 88px, @gray 88px, @gray 89px, @gray-lighten 89px);
 
     &_main {
@@ -166,7 +183,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 50px;
 
     border-bottom: none;
   }
@@ -182,7 +198,7 @@
 
   .header__main-nav {
     order: 1;
-    width: 400px;
+    width: 60%;
   }
 
   .header__text {
@@ -190,7 +206,8 @@
 
     order: 1;
     display: block;
-    width: 260px;
+    box-sizing: border-box;
+    width: 40%;
     margin: 10px 0 0;
     padding: 10px 0 0;
 
@@ -201,6 +218,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .header__inner {
+    padding: 0;
+  }
+
   .header__logo {
     margin: 0 auto;
   }
@@ -220,6 +241,7 @@
   }
 
   .header__text {
+    width: 260px;
     right: 50px;
   }
 }

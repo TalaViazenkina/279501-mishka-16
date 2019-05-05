@@ -5,12 +5,12 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    right: @mobil-padding * -1;
+    left: @mobil-padding * -1;
 
     height: 10px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: center;
     background-size: 320px 7px;
     transform: rotate(180deg);
@@ -20,11 +20,8 @@
 @media (min-width: @tablet-width) {
   .bg-zigzag {
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      right: @tablet-padding * -1;
+      left: @tablet-padding * -1;
 
       height: 20px;
       background-size: 768px 16px;
@@ -35,6 +32,9 @@
 @media (min-width: @desktop-width) {
   .bg-zigzag {
     &::before {
+      right: 0;
+      left: 0;
+
       height: 23px;
       background-size: 1050px;
     }

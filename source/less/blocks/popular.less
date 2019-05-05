@@ -1,5 +1,6 @@
 .popular {
-  padding: 28px 30px 35px;
+  padding-top: 28px;
+  padding-bottom: 35px;
 }
 
 .popular__inner {
@@ -7,8 +8,6 @@
 }
 
 .popular__title {
-  .font(25px; 30px);
-  color: @black;
   margin: 0 0 5px 0;
 }
 
@@ -31,11 +30,15 @@
 }
 
 .popular__image {
-  width: 260px;
-  height: 315px;
   margin: 0 0 25px 0;
 
   background-color: @gray-lighten; //временно для сетки
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .popular__price {
@@ -49,18 +52,19 @@
   .popular {
     display: flex;
     flex-direction: column;
-    padding: 45px 0 50px;
+    padding-top: 45px;
+    padding-bottom: 72px;
   }
 
   .popular__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 
   .popular__title {
-    .font(43px; 50px);
+    margin: 0;
   }
 
   .popular__label {
@@ -75,9 +79,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 290px;
+    box-sizing: border-box;
+    width: 50%;
     min-height: 410px;
-    padding-right: 378px;
+    padding-right: 44px;
   }
 
   .popular__text {
@@ -92,7 +97,7 @@
   .popular__image {
     position: absolute;
     top: 5px;
-    right: 0;
+    right: -100%;
 
     width: 334px;
     height: 405px;
@@ -109,35 +114,35 @@
 @media (min-width: @desktop-width) {
   .popular {
     position: relative;
-    min-height: 636px;
-    padding: 55px 0 20px 175px;
-    margin-top: 70px;
+    min-height: 581px;
+    padding-top: 125px;
+    padding-bottom: 75px;
   }
 
   .popular__inner {
-    justify-content: flex-start;
-    margin-left: -175px;
-  }
-
-  .popular__title {
-    .font(53px; 57px);
+    position: relative;
+    margin-bottom: 48px;
   }
 
   .popular__label {
-    order: -1;
-    padding: 0 25px;
+    position: absolute;
+    top: 15px;
+    left: -155px;
   }
 
   .popular__description {
     position: static;
+    width: 100% / 5 * 2;
     min-height: 475px;
-    padding-right: 585px;
+    padding-right: 60px;
   }
 
   .popular__image {
     z-index: -1;
     width: 525px;
     height: 636px;
+    top: 70px;
+    right: 0;
   }
 
   .popular__price {

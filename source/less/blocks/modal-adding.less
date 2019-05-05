@@ -58,13 +58,16 @@
 
   background-color: transparent;
   border: 2px solid @gray;
+  cursor: pointer;
 
   &_checked {
     border-color: @downy;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @gray-darken;
+    outline: none;
   }
 
   &:active {

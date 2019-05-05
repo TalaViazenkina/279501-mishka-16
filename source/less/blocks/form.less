@@ -1,14 +1,9 @@
 .form {
-  padding: 0 30px 55px;
+  padding-top: 15px;
+  padding-bottom: 55px;
 }
 
-.form__fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.form__text {
+.form__info {
   .font(14px; 16px);
 
   margin: 0 0 30px;
@@ -18,37 +13,37 @@
 }
 
 .form__button {
-  width: 260px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 0 50px;
+    padding-top: 5px;
   }
 
   .form__inner {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
+    align-items: flex-start;
   }
 
   .form__button {
     width: 230px;
   }
 
-  .form__text {
-    margin: 0;
+  .form__info {
+    .font(17px; 30px);
+    align-self: center;
+    order: 1;
+    margin: 0 0 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form {
-    padding-top: 7px;
+  .form__info {
+    margin-right: 175px;
   }
 
-  .form__inner {
-    padding: 0 225px;
+  .form__button {
+    margin-left: 175px;
   }
 }
