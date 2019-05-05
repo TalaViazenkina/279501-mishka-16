@@ -111,7 +111,11 @@
             </tr>
           </table>
           <p class="popular__image">
-            <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            </picture>
           </p>
           <p class="popular__price">Цена: 990 руб.</p>
           <a href="#" class="popular__order button js-cart">Заказать</a>
@@ -235,7 +239,11 @@
       </div>
       <div class="contacts__map map">
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6123707705156!2d30.32322978894264!3d59.93857406121524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1555935937806!5m2!1sru!2sby" width="320" height="457" allowfullscreen></iframe>
-        <img class="map__image" src="http://placehold.it/320x457" width="320" height="457" alt="Часть карты с интернет-магазином Mishka по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Часть карты с интернет-магазином Mishka по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        </picture>
       </div>
       <div class="container">
         <a href="#" class="button contacts__write">Напишите нам</a>
