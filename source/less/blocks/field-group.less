@@ -14,7 +14,8 @@
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 31px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   text-transform: uppercase;
   color: @downy;
@@ -34,12 +35,16 @@
 
 .field-group__list {
   .list-off();
+  padding-top: 12px;
 }
 
 .field-group__item-option {
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+.field-group__item-text {
+  padding-bottom: 20px;
+}
 @media (min-width: @tablet-width) {
   .field-group {
     padding-top: 50px;
@@ -62,6 +67,7 @@
 
   .field-group__list {
     width: 75%;
+    padding-top: 0;
   }
 
   .field-group__list_col {
