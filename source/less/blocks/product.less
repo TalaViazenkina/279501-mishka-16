@@ -17,8 +17,7 @@
 .product__image {
   display: block;
 
-  background-color: @gray-lighten; //временно для сетки
-
+  //блок для тени при фокусе с клавиатуры
   &::before {
     content: "";
     position: absolute;
@@ -132,7 +131,7 @@
   }
 
   .product__image {
-    .size(334px; 334px);
+    width: 50%;
 
     &::before {
       top: 0;
@@ -142,7 +141,6 @@
   .product__description {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     width: 50%;
     padding: 27px 33px 0 27px;
   }
@@ -200,7 +198,7 @@
   }
 
   .product__image {
-    .size(316px; 462px);
+    width: 100%;
 
     &::before {
       top: 462px;
