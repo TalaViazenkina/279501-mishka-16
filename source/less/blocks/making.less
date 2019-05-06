@@ -47,15 +47,18 @@
   color: @black;
 }
 
-.making__video {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .making__container {
   position: relative;
   margin: 0 0 30px;
+}
+
+.making__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .making__control {
@@ -81,6 +84,11 @@
     opacity: 0.3;
     transform: translate(-50%, -50%) scale(0.8);
   }
+}
+
+.making__image {
+  display: block;
+  width: 100%;
 }
 
 .making__description {
