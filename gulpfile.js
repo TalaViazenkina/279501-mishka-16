@@ -10,6 +10,7 @@ var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 var server = require("browser-sync").create();
 
 gulp.task("clean", function () {
@@ -56,6 +57,11 @@ gulp.task("images", function () {
   .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("build/img"));
+});
 
 gulp.task("server", function () {
   server.init({
@@ -79,6 +85,7 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "images",
+  "webp",
   "css",
   "html"
   ));
