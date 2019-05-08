@@ -90,6 +90,7 @@
 
 .product__button {
   .size(84px; 72px);
+  position: relative;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -98,22 +99,28 @@
   margin-right: -27px;
   cursor: pointer;
 
-  & path {
-    fill: rgba(@mine-shaft, 0.2);
-  }
-
   &:hover,
   &:focus {
     outline: none;
 
-    path {
+    .product__icon {
       fill: @downy;
     }
   }
 
-  &:active path {
+  &:active .product__icon {
     fill: rgba(@downy, 0.3);
   }
+}
+
+.product__icon {
+  .size(21px; 19px);
+
+  position: absolute;
+  top: 25px;
+  left: 30px;
+
+  fill: rgba(@mine-shaft, 0.2);
 }
 
 @media (min-width: @tablet-width) {
