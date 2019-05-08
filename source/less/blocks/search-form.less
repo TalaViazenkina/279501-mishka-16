@@ -10,12 +10,12 @@
   flex-shrink: 0;
   padding: 0 15px 0 32px;
 
-  fill: rgba(@mine-shaft, 0.2);
+  color: rgba(@mine-shaft, 0.2);
 }
 
 .search-form:hover {
   .search-form__icon {
-    fill: @downy;
+    color: @downy;
   }
 }
 
@@ -59,7 +59,7 @@
   outline: none;
 
   & ~ .search-form__icon {
-    fill: @downy;
+    color: @downy;
   }
 
   /* Для браузеров, в которых при фокусе плейсхолдер исчезает только при начале набора */
@@ -78,7 +78,7 @@
 
 .search-form__input:active {
   & ~ .search-form__icon {
-    fill: rgba(@downy, 0.3);
+    color: rgba(@downy, 0.3);
   }
 }
 
