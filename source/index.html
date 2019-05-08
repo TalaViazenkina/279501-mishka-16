@@ -115,7 +115,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-              <source mtype="image/webp" srcset="img/triple-set-mobil@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source mtype="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
@@ -184,11 +184,17 @@
           </li>
         </ul>
         <p class="feedbacks__toggles">
-          <button class="feedbacks__toggle feedbacks__toggle_previous" type="button">
+          <button class="feedbacks__toggle" type="button">
+            <svg class="feedbacks__toggle-icon" width="50px" height="26.003px" focusable="false">
+              <use xlink:href="#icon-left-arrow" fill="currentColor">
+            </svg>
             <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
           <button class="feedbacks__toggle feedbacks__toggle_next" type="button">
             <span class="visually-hidden">Следующий отзыв</span>
+            <svg class="feedbacks__toggle-icon" width="50px" height="26.003px" focusable="false">
+              <use xlink:href="#icon-right-arrow" fill="currentColor">
+            </svg>
           </button>
         </p>
         <a href="#" class="button feedbacks__write">Написать</a>
