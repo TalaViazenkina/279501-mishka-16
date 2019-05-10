@@ -57,10 +57,9 @@ gulp.task("css", function () {
 
 gulp.task("js", function () {
   return pipeline(
-        gulp.src("source/js/*.js"),
-        uglify(),
-        gulp.dest("build/js")
-        );
+    gulp.src("source/js/*.js"),
+    uglify(),
+    gulp.dest("build/js"));
 });
 
 gulp.task("images", function () {
