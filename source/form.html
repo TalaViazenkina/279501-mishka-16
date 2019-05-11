@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка-форма заказа</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link  href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement( "picture" );
   </script>
@@ -26,11 +29,11 @@
           </picture>
         </a>
         <button class="header__toggle" type="button">
-          <svg  class="header__toggle-icon header__toogle-icon_open" width="19.958px" height="14px" aria-label="Открыть меню" focusable="false">
-            <use xlink:href="#icon-menu-open" fill="currentColor"></use>
+          <svg  class="header__toggle-icon header__toogle-icon_open" width="20" height="14" aria-label="Открыть меню" focusable="false">
+            <use xlink:href="#icon-menu-open"></use>
           </svg>
-          <svg class="header__toggle-icon header__toogle-icon_close" width="20.514px" height="20.512px" aria-label="Закрыть меню" focusable="false">
-            <use xlink:href="#icon-menu-close" fill="currentColor"></use>
+          <svg class="header__toggle-icon header__toogle-icon_close" width="21" height="21" aria-label="Закрыть меню" focusable="false">
+            <use xlink:href="#icon-menu-close"></use>
           </svg>
         </button>
         <nav class="header__main-nav">
@@ -47,14 +50,14 @@
           <label class="search-form__label">
             <span class="visually-hidden">Поиск по сайту</span>
             <input class="search-form__input" id="search" type="search" name="header-search"  placeholder="Поиск по сайту">
-            <svg class="search-form__icon" width="17.6px" height="17.6px" focusable="false">
-              <use xlink:href="#icon-search" fill="currentColor"></use>
+            <svg class="search-form__icon" width="18" height="18" focusable="false">
+              <use xlink:href="#icon-search"></use>
             </svg>
           </label>
         </form>
         <a class="header__cart cart" href="#">
-          <svg class="cart__icon" width="20.294px" height="18.849px" focusable="false">
-            <use xlink:href="#icon-cart" fill="currentColor"></use>
+          <svg class="cart__icon" width="20" height="19" focusable="false">
+            <use xlink:href="#icon-cart"></use>
           </svg>
           Корзина: пока пуста
         </a>
@@ -79,91 +82,82 @@
       <p class="main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
     </div>
     <form  class="form" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="field-group container">
-        <!-- добавлена обретка, т.к. <fieldset>  не может быть флекс-контейнером -->
-        <div class="form__inner">
-          <legend class="field-group__legend">Тип</legend>
-          <ul class="field-group__list">
-            <li class="field-group__item radio">
-              <input class="visually-hidden radio__control" id="interior" type="radio" name="product-type" value="interior" checked>
-              <label class="radio__label" for="interior">Аксессуар для интерьера</label>
-            </li>
-            <li class="field-group__item radio">
-              <input class="visually-hidden radio__control" id="toys" type="radio" name="product-type" value="toys">
-              <label class="radio__label" for="toys">Детская игрушка</label>
-            </li>
-          </ul>
-        </div>
-      </fieldset>
-      <fieldset class="field-group field-group_bg container">
-        <!-- добавлена обретка, т.к. <fieldset>  не может быть флекс-контейнером -->
-        <div class="form__inner">
-          <legend class="field-group__legend">Цвет</legend>
-          <ul class="field-group__list field-group__list_col">
-            <li class="field-group__item checkbox">
-              <input class="visually-hidden checkbox__control" id="white" type="checkbox" name="color-white" checked >
-              <label class="checkbox__label" for="white">Белый</label>
-            </li>
-            <li class="field-group__item checkbox">
-              <input class="visually-hidden checkbox__control" id="gray" type="checkbox" name="color-gray" checked>
-              <label class="checkbox__label" for="gray">Серый</label>
-            </li>
-            <li class="field-group__item checkbox">
-              <input class="visually-hidden checkbox__control" id="tiffany" type="checkbox" name="color-tiffany" >
-              <label class="checkbox__label" for="tiffany">&laquo;Тиффани&raquo;</label>
-            </li>
-            <li class="field-group__item checkbox">
-              <input class="visually-hidden checkbox__control" id="black" type="checkbox" name="color-black" >
-              <label class="checkbox__label" for="black">Черный</label>
-            </li>
-            <li class="field-group__item checkbox">
-              <input class="visually-hidden checkbox__control" id="pink" type="checkbox" name="color-pink" >
-              <label class="checkbox__label" for="pink">Розовый</label>
-            </li>
-            <li class="field-group__item  checkbox">
-              <input class="visually-hidden checkbox__control" id="orange" type="checkbox" name="color-orange" >
-              <label class="checkbox__label" for="orange">Оранжевый</label>
-            </li>
-          </ul>
-        </div>
-      </fieldset>
-      <fieldset class="field-group container">
-        <!-- добавлена обретка, т.к. <fieldset>  не может быть флекс-контейнером -->
-        <div class="form__inner">
-          <legend class="field-group__legend">ФИО</legend>
-          <ul class="field-group__list">
-            <li class="field-group__item input">
-              <label for="name" class="input__label">Имя:</label>
-              <input class="input__control" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
-            </li>
-            <li class="field-group__item input">
-              <label for="surname" class="input__label">Фамилия:</label>
-              <input class="input__control" id="surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
-            </li>
-            <li class="field-group__item input">
-              <label for="patronymic" class="input__label">Отчество:</label>
-              <input class="input__control" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
-            </li>
-          </ul>
-        </div>
-      </fieldset>
+      <div class="form__inner field-group container">
+        <h2 class="field-group__legend">Тип</h2>
+        <ul class="field-group__list">
+          <li class="field-group__item radio">
+            <input class="visually-hidden radio__control" id="interior" type="radio" name="product-type" value="interior" checked>
+            <label class="radio__label" for="interior">Аксессуар для интерьера</label>
+          </li>
+          <li class="field-group__item radio">
+            <input class="visually-hidden radio__control" id="toys" type="radio" name="product-type" value="toys">
+            <label class="radio__label" for="toys">Детская игрушка</label>
+          </li>
+        </ul>
+      </div>
+      <div class="form__inner field-group field-group_bg container">
+        <h2 class="field-group__legend">Цвет</h2>
+        <ul class="field-group__list field-group__list_col">
+          <li class="field-group__item checkbox">
+            <input class="visually-hidden checkbox__control" id="white" type="checkbox" name="color-white" checked >
+            <label class="checkbox__label" for="white">Белый</label>
+          </li>
+          <li class="field-group__item checkbox">
+            <input class="visually-hidden checkbox__control" id="gray" type="checkbox" name="color-gray" checked>
+            <label class="checkbox__label" for="gray">Серый</label>
+          </li>
+          <li class="field-group__item checkbox">
+            <input class="visually-hidden checkbox__control" id="tiffany" type="checkbox" name="color-tiffany" >
+            <label class="checkbox__label" for="tiffany">&laquo;Тиффани&raquo;</label>
+          </li>
+          <li class="field-group__item checkbox">
+            <input class="visually-hidden checkbox__control" id="black" type="checkbox" name="color-black" >
+            <label class="checkbox__label" for="black">Черный</label>
+          </li>
+          <li class="field-group__item checkbox">
+            <input class="visually-hidden checkbox__control" id="pink" type="checkbox" name="color-pink" >
+            <label class="checkbox__label" for="pink">Розовый</label>
+          </li>
+          <li class="field-group__item  checkbox">
+            <input class="visually-hidden checkbox__control" id="orange" type="checkbox" name="color-orange" >
+            <label class="checkbox__label" for="orange">Оранжевый</label>
+          </li>
+        </ul>
+      </div>
+      <div class="form__inner field-group container">
+        <h2 class="field-group__legend">ФИО</h2>
+        <ul class="field-group__list">
+          <li class="field-group__item input">
+            <label for="name" class="input__label">Имя:</label>
+            <input class="input__control" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
+          </li>
+          <li class="field-group__item input">
+            <label for="surname" class="input__label">Фамилия:</label>
+            <input class="input__control" id="surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
+          </li>
+          <li class="field-group__item input">
+            <label for="patronymic" class="input__label">Отчество:</label>
+            <input class="input__control" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
+          </li>
+        </ul>
+      </div>
       <div class="field-group field-group_bg container">
         <p class="field-group__item input">
           <label class="field-group__legend" for="phone">Тел</label>
           <input class="input__control" id="phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-          <svg class="input__icon" width="24.829px" height="24.333px" focusable="false">
-            <use xlink:href="#icon-phone" fill="currentColor"></use>
+          <svg class="input__icon" width="25" height="24" focusable="false">
+            <use xlink:href="#icon-phone"></use>
           </svg>
         </p>
         <p class="field-group__item input">
           <label class="field-group__legend field-group__legend_email" for="email">E-mail</label>
           <input class="input__control" id="email" type="email" name="email" placeholder="Ваш Email*" required>
-          <svg class="input__icon" width="32px" height="32px" focusable="false">
-            <use xlink:href="#icon-mail" fill="currentColor"></use>
+          <svg class="input__icon" width="32" height="32" focusable="false">
+            <use xlink:href="#icon-mail"></use>
           </svg>
         </p>
       </div>
-      <p class="field-group form__inner textarea container">
+      <p class="form__inner field-group textarea container">
         <label class="field-group__legend" for="message">Доп</label>
         <textarea class="field-group__item textarea__control" id="message" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </p>
@@ -175,36 +169,34 @@
   </main>
 
   <footer class="footer">
-
-  </footer>
-<div class="container footer__inner">
+    <div class="container footer__inner">
       <a class="footer__logo" href="index.html">
-        <svg class="footer__logo-image" width="101.615px" height="34.056px" focusable="false">
-          <use xlink:href="#icon-logo-footer" fill="currentColor"></use>
+        <svg class="footer__logo-image" width="102" height="34" focusable="false" aria-label="Логотип интернет-магазина вязаных игрушек Mishka">
+          <use xlink:href="#icon-logo-footer"></use>
         </svg>
       </a>
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link" href="#">
             <span class="visually-hidden">Mishka в Инстаграме</span>
-            <svg class="social__icon" width="21.769px" height="21.334px" focusable="false">
-              <use xlink:href="#icon-insta" fill="currentColor"></use>
+            <svg class="social__icon" width="22" height="21" focusable="false">
+              <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#">
             <span class="visually-hidden">Mishka на Фейсбуке</span>
-            <svg class="social__icon" width="14.962px" height="27.718px" focusable="false">
-              <use xlink:href="#icon-fb" fill="currentColor"></use>
+            <svg class="social__icon" width="15" height="28" focusable="false">
+              <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#">
             <span class="visually-hidden">Mishka в Tвиттере</span>
-            <svg class="social__icon" width="23.494px" height="20.168px" focusable="false">
-              <use xlink:href="#icon-twitter" fill="currentColor"></use>
+            <svg class="social__icon" width="23" height="20" focusable="false">
+              <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
@@ -212,12 +204,14 @@
       <p class="footer__copyright copyright">Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">HTMLAcademy</span>
-          <svg class="copyright__icon" width="26.943px" height="34.09px" focusable="false">
-            <use xlink:href="#icon-logo-htmlacademy" fill="currentColor"></use>
+          <svg class="copyright__icon" width="27" height="34" focusable="false">
+            <use xlink:href="#icon-logo-htmlacademy"></use>
           </svg>
         </a>
       </p>
     </div>
+  </footer>
+
   <script src="js/header.js"></script>
 
 </body>
