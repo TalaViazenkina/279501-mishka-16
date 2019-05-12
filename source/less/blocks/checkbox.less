@@ -6,10 +6,7 @@
   position: relative;
   display: block;
   padding: 11px 0 12px 62px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 
   &::before {
     .pseudo(36px; 35px);
@@ -44,6 +41,16 @@
 }
 
 .checkbox__control:active ~ .checkbox__label::before {
+  border-color: @gray-darkest;
+  opacity: 0.3;
+}
+
+.checkbox__control:disabled ~ .checkbox__label {
+  cursor: default;
+}
+
+.checkbox__control:disabled ~ .checkbox__label::before,
+.checkbox__control:disabled ~ .checkbox__label::after {
   border-color: @gray-darkest;
   opacity: 0.3;
 }

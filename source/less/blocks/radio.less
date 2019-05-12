@@ -8,10 +8,7 @@
   display: block;
   min-height: 40px;
   padding: 10px 0 0 62px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 
   &::before {
     .pseudo(36px; 36px);
@@ -47,6 +44,20 @@
 
 .radio__control:active ~ .radio__label::before {
   border-color: @gray-darkest;
+  opacity: 0.3;
+}
+
+.radio__control:disabled ~ .radio__label {
+  cursor: default;
+}
+
+.radio__control:disabled ~ .radio__label::before {
+  border-color: @gray-darkest;
+  opacity: 0.3;
+}
+
+.radio__control:disabled ~ .radio__label::after {
+  background-color: @gray-darkest;
   opacity: 0.3;
 }
 
